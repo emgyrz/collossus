@@ -1,0 +1,47 @@
+// @flow
+
+import type { CallbackFuncType, CompareFuncType } from '../_types'
+
+declare export default class Collection<T> {
+
+constructor( initItems?: Array<T> ): Collection<T>;
+length: number;
+isEmpty(): boolean;
+first(): null | T;
+last(): null | T;
+lastIndex(): number;
+
+get( index: number ): null | T;
+set( index: number, value: T ): boolean;
+
+clear(): void;
+reset( data: null | Array<T> ): void;
+
+getInnerRef(): Array<T>;
+toArray(): Array<T>;
+
+push( it: T | Array<T> ): void;
+pushUniq( it: T | Array<T> ): void;
+pushUniqBy( it: T | Array<T>, compare: CompareFuncType<T> ): void;
+
+findBy( cb: CallbackFuncType<T, boolean>, startIndex?: number ): null | T;
+findIndexBy( cb: CallbackFuncType<T, boolean>, startIndex?: number ): number;
+rfindBy( cb: CallbackFuncType<T, boolean>, startIndex?: number ): null | T;
+rfindIndexBy( cb: CallbackFuncType<T, boolean>, startIndex?: number ): number;
+has( it: T ): boolean;
+
+remove( index: number ): boolean;
+removeBy( callback: CallbackFuncType<T, boolean> ): boolean;
+// removeRange( startIndex: number, endIndex: number ): number;
+
+forEach( callback: CallbackFuncType<T, void> ): void;
+some( cb: CallbackFuncType<T, boolean>, startIndex?: number ): boolean;
+reduce<A>( callback: ( acc: A, it: T ) => A, initValue: A ): A;
+
+map<R>( callback: CallbackFuncType<T, R> ): Collection<R>;
+mapArr<R>( callback: CallbackFuncType<T, R> ): Array<R>;
+
+chunks( chunkSize: number ): Array<Array<T>>;
+swap( indexA: number, indexB: number ): boolean;
+
+}

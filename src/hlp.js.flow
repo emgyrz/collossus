@@ -1,0 +1,15 @@
+// @flow
+
+declare export function isArr<T>( arr: any ): boolean %checks ( Array.isArray( arr ) )
+
+declare export function isNull( some: any ): boolean %checks ( some === null )
+
+declare export function isNum( some: any ): boolean %checks ( typeof some === 'number' )
+
+declare export function castArr<T>( maybeArr?: Array<T> ): Array<T>
+
+declare export function castNum( some: any, defVal?: number ): number
+
+declare export function isValidIndex( ind: number, len: number ): boolean
+
+declare export function defaultCompareFn<T>( itA: T, itB: T ): boolean

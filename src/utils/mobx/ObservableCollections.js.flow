@@ -1,0 +1,10 @@
+// @flow
+import Collection from "../../Collection"
+import IdCollection from "../../IdCollection"
+import type { IHasId } from "../../_types"
+
+declare export class ObservableCollection<T> extends Collection<T> {
+}
+
+declare export class ObservableIdCollection<T: IHasId> extends IdCollection<T> {
+}

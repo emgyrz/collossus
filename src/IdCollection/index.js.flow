@@ -1,0 +1,15 @@
+// @flow
+
+import Collection from '../Collection'
+
+import type { IdOf, IHasId } from '../_types'
+
+declare export default class IdCollection<T: IHasId> extends Collection<T> {
+constructor( initItems?: Array<T> ): IdCollection<T>;
+
+findById( id: IdOf<T> ): null | T;
+findIndexById( id: IdOf<T> ): number;
+removeById( id: IdOf<T> ): boolean;
+hasById( id: IdOf<T> ): boolean;
+pushUniqById( it: Array<T> | T ): void;
+}
