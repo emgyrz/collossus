@@ -2,6 +2,8 @@
 
 Collection ( or Array or Vector or List or etc.) of elements of the same type.
 
+![npm](https://img.shields.io/npm/v/collossus)
+
 Has everything that we are so lacking in JS `Array`s and a little more.\
 It is strongly typed: written in TypeScript and has Flow declarations.
 
@@ -101,3 +103,12 @@ if (
 * [hasById](https://emgyrz.github.io/collossus/classes/idcollection.html#hasbyid) - `( id: IdOf<T> ) => boolean`
 * [pushUniqById](https://emgyrz.github.io/collossus/classes/idcollection.html#pushuniqbyid) - `( it: Array<T> | T ) => void`
 * [removeById](https://emgyrz.github.io/collossus/classes/idcollection.html#removebyid) - `( id: IdOf<T> ) => null | T`
+
+
+
+### License
+
+This module is [MIT licensed](./LICENSE).
+
+
+##### Enjoy using!

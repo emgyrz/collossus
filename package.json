@@ -1,6 +1,6 @@
 {
   "name": "collossus",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "main": "./index.js",
   "types": "./index.d.ts",
   "license": "MIT",
@@ -12,13 +12,30 @@
     "lint:es": "eslint --fix ./src",
     "lint": "npm run lint:ts && npm lint:flow",
     "clean": "conf/rm_dist.sh",
-    "doc": "typedoc src/index.ts --out docs/html --mode library --excludePrivate",
-    "doc:md": "typedoc src/index.ts --out docs/md --mode library --excludePrivate --plugin typedoc-plugin-markdown",
+    "doc": "typedoc src/index.ts --out docs/html --mode library --excludePrivate --excludeProtected",
+    "doc:md": "typedoc src/index.ts --out docs/md --mode library --excludePrivate --excludeProtected --plugin typedoc-plugin-markdown",
     "build": "npm run clean && npm run rlp && npm run declarations"
   },
-  "repository": {
-    "url": "https://github.com/emgyrz/collection.git"
+  "author": {
+    "name": "Max Zommer",
+    "email": "emgyrz@gmail.com",
+    "url": "https://github.com/emgyrz"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emgyrz/collossus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/emgyrz/collossus/issues"
+  },
+  "homepage": "https://github.com/emgyrz/collossus",
+  "description": "Typed collection of elements",
+  "keywords": [
+    "collection",
+    "array",
+    "array helpers",
+    "collection of elements with id"
+  ],
   "private": false,
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.2",
