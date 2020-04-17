@@ -1,8 +1,0 @@
-// @flow
-
-export type CallbackFuncType<T, R> = ( it: T, index: number ) => R
-export type CompareFuncType<T> = ( itA: T, itB: T ) => boolean
-
-export type IHasId = { id: string } | { id: number }
-
-export type IdOf<T> = $PropertyType<T, 'id'>

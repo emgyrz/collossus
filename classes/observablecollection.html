@@ -1,0 +1,1473 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ObservableCollection | collossus</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">collossus</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="observablecollection.html">ObservableCollection</a>
+				</li>
+			</ul>
+			<h1>Class ObservableCollection&lt;T&gt;</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The same as <a href="collection.html">Collection</a> but ready to use with <code>MobX</code><br>Its inner array of elements is <code>observable</code> and state changing methods are <code>action</code>s<br>See all docs in <a href="collection.html">Collection</a></p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-type-parameters">
+				<h3>Type parameters</h3>
+				<ul class="tsd-type-parameters">
+					<li>
+						<h4>T</h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<a href="collection.html" class="tsd-signature-type">Collection</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">ObservableCollection</span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section tsd-is-inherited">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><a href="observablecollection.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-inherited tsd-is-private-protected">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="observablecollection.html#_list" class="tsd-kind-icon">_list</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-inherited">
+							<h3>Accessors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="observablecollection.html#length" class="tsd-kind-icon">length</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-inherited">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="observablecollection.html#_init" class="tsd-kind-icon">_init</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="observablecollection.html#chunks" class="tsd-kind-icon">chunks</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="observablecollection.html#clear" class="tsd-kind-icon">clear</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="observablecollection.html#findby" class="tsd-kind-icon">find<wbr>By</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="observablecollection.html#findindexby" class="tsd-kind-icon">find<wbr>Index<wbr>By</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="observablecollection.html#first" class="tsd-kind-icon">first</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="observablecollection.html#foreach" class="tsd-kind-icon">for<wbr>Each</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="observablecollection.html#get" class="tsd-kind-icon">get</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="observablecollection.html#getinnerref" class="tsd-kind-icon">get<wbr>Inner<wbr>Ref</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="observablecollection.html#has" class="tsd-kind-icon">has</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="observablecollection.html#isempty" class="tsd-kind-icon">is<wbr>Empty</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="observablecollection.html#last" class="tsd-kind-icon">last</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="observablecollection.html#lastindex" class="tsd-kind-icon">last<wbr>Index</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="observablecollection.html#map" class="tsd-kind-icon">map</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="observablecollection.html#maparr" class="tsd-kind-icon">map<wbr>Arr</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="observablecollection.html#push" class="tsd-kind-icon">push</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="observablecollection.html#pushuniq" class="tsd-kind-icon">push<wbr>Uniq</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="observablecollection.html#pushuniqby" class="tsd-kind-icon">push<wbr>Uniq<wbr>By</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="observablecollection.html#reduce" class="tsd-kind-icon">reduce</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="observablecollection.html#remove" class="tsd-kind-icon">remove</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="observablecollection.html#removeby" class="tsd-kind-icon">remove<wbr>By</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="observablecollection.html#reset" class="tsd-kind-icon">reset</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="observablecollection.html#rfindby" class="tsd-kind-icon">rfind<wbr>By</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="observablecollection.html#rfindindexby" class="tsd-kind-icon">rfind<wbr>Index<wbr>By</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="observablecollection.html#set" class="tsd-kind-icon">set</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="observablecollection.html#swap" class="tsd-kind-icon">swap</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="observablecollection.html#toarray" class="tsd-kind-icon">to<wbr>Array</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Observable<wbr>Collection<span class="tsd-signature-symbol">(</span>initItems<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="observablecollection.html" class="tsd-signature-type">ObservableCollection</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="collection.html">Collection</a>.<a href="collection.html#constructor">constructor</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/emgyrz/collossus/blob/eaff73d/src/Collection/index.ts#L17">Collection/index.ts:17</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates new collection</p>
+								</div>
+								<pre><code class="language-typescript"><span class="hljs-keyword">const</span> nums: Collection&lt;<span class="hljs-built_in">number</span>&gt; = <span class="hljs-keyword">new</span> Collection()
+nums.push( <span class="hljs-number">1</span> )
+
+<span class="hljs-keyword">const</span> vegetables = <span class="hljs-keyword">new</span> Collection( [ {
+  name: <span class="hljs-string">'potato'</span>,
+  cost: <span class="hljs-number">20</span>
+}, {
+  name: <span class="hljs-string">'squash'</span>,
+  cost: <span class="hljs-number">31</span>
+} ] )
+</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> initItems: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="observablecollection.html" class="tsd-signature-type">ObservableCollection</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited tsd-is-private-protected">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="_list" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _list</h3>
+					<div class="tsd-signature tsd-kind-icon">_list<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="collection.html">Collection</a>.<a href="collection.html#_list">_list</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/emgyrz/collossus/blob/eaff73d/src/Collection/index.ts#L17">Collection/index.ts:17</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+				<h2>Accessors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+					<a name="length" class="tsd-anchor"></a>
+					<h3>length</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> length<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="collection.html">Collection</a>.<a href="collection.html#length">length</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/emgyrz/collossus/blob/eaff73d/src/Collection/index.ts#L56">Collection/index.ts:56</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Items count</p>
+								</div>
+								<pre><code class="language-typescript"><span class="hljs-keyword">const</span> vec = <span class="hljs-keyword">new</span> Collection( [ [], [] ] )
+assert( vec.length === <span class="hljs-number">2</span> )
+vec.clear()
+assert( vec.length === <span class="hljs-number">0</span> )</code></pre>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="_init" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _init</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">_init<span class="tsd-signature-symbol">(</span>initItems<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="collection.html">Collection</a>.<a href="collection.html#_init">_init</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/emgyrz/collossus/blob/eaff73d/src/Collection/index.ts#L41">Collection/index.ts:41</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> initItems: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="chunks" class="tsd-anchor"></a>
+					<h3>chunks</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">chunks<span class="tsd-signature-symbol">(</span>chunkSize<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="collection.html">Collection</a>.<a href="collection.html#chunks">chunks</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/emgyrz/collossus/blob/eaff73d/src/Collection/index.ts#L542">Collection/index.ts:542</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>chunkSize: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="clear" class="tsd-anchor"></a>
+					<h3>clear</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">clear<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="collection.html">Collection</a>.<a href="collection.html#clear">clear</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/emgyrz/collossus/blob/eaff73d/src/Collection/index.ts#L176">Collection/index.ts:176</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Clears the collection, removing all values</p>
+								</div>
+								<pre><code class="language-typescript"><span class="hljs-keyword">const</span> vec = <span class="hljs-keyword">new</span> Collection( [ <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span> ] )
+vec.clear()
+assert( vec.isEmpty() )</code></pre>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="findby" class="tsd-anchor"></a>
+					<h3>find<wbr>By</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">find<wbr>By<span class="tsd-signature-symbol">(</span>predicate<span class="tsd-signature-symbol">: </span><a href="../globals.html#callbackfunctype" class="tsd-signature-type">CallbackFuncType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span>, startIndex<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="collection.html">Collection</a>.<a href="collection.html#findby">findBy</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/emgyrz/collossus/blob/eaff73d/src/Collection/index.ts#L335">Collection/index.ts:335</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Searches for an element that satisfies a predicate<br>Takes a closure that returns <code>boolean</code>. It applies this closure to each element of the collection,
+									and if any of them return <code>true</code>, then <code>findBy()</code> returns element. If they all return <code>false</code>, it returns <code>null</code></p>
+								</div>
+								<pre><code class="language-typescript"><span class="hljs-keyword">const</span> nums = <span class="hljs-keyword">new</span> Collection( [ <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span> ] )
+<span class="hljs-keyword">const</span> one = nums.find( ( n: <span class="hljs-built_in">number</span> ): <span class="hljs-function"><span class="hljs-params">boolean</span> =&gt;</span> n === <span class="hljs-number">1</span> )
+assert( one === <span class="hljs-number">1</span> )
+<span class="hljs-keyword">const</span> ten = nums.find( <span class="hljs-function"><span class="hljs-params">n</span> =&gt;</span> n === <span class="hljs-number">10</span> )
+assert( ten === <span class="hljs-literal">null</span> )
+
+<span class="hljs-keyword">type</span> Tree = { name: <span class="hljs-built_in">string</span> }
+<span class="hljs-keyword">const</span> trees = <span class="hljs-keyword">new</span> Collection&lt;Tree&gt;( [ { name: <span class="hljs-string">'spruce'</span> }, { name: <span class="hljs-string">'pine'</span> }, { name: <span class="hljs-string">'poplar'</span> } ] )
+<span class="hljs-keyword">const</span> pine = trees.find( ( t: Tree ): <span class="hljs-function"><span class="hljs-params">boolean</span> =&gt;</span> t.name === <span class="hljs-string">'pine'</span> )
+assert( pine &amp;&amp; pine.name === <span class="hljs-string">'pine'</span> )
+<span class="hljs-keyword">const</span> pineAtTheEnd = trees.find( <span class="hljs-function"><span class="hljs-params">t</span> =&gt;</span> t.name === <span class="hljs-string">'pine'</span>, <span class="hljs-number">2</span> )
+assert( pine === <span class="hljs-literal">null</span> )</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>predicate: <a href="../globals.html#callbackfunctype" class="tsd-signature-type">CallbackFuncType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Predicate</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> startIndex: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The position where to start searching</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="findindexby" class="tsd-anchor"></a>
+					<h3>find<wbr>Index<wbr>By</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">find<wbr>Index<wbr>By<span class="tsd-signature-symbol">(</span>predicate<span class="tsd-signature-symbol">: </span><a href="../globals.html#callbackfunctype" class="tsd-signature-type">CallbackFuncType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span>, startIndex<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="collection.html">Collection</a>.<a href="collection.html#findindexby">findIndexBy</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/emgyrz/collossus/blob/eaff73d/src/Collection/index.ts#L360">Collection/index.ts:360</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Searches for an index of element that satisfies a predicate<br>Like <a href="observablecollection.html#findby">findBy</a> but returns index</p>
+								</div>
+								<pre><code class="language-typescript"><span class="hljs-keyword">const</span> nums = <span class="hljs-keyword">new</span> Collection( [ <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span> ] )
+<span class="hljs-keyword">const</span> oneInd = nums.find( ( n: <span class="hljs-built_in">number</span> ): <span class="hljs-function"><span class="hljs-params">boolean</span> =&gt;</span> n === <span class="hljs-number">1</span> )
+assert( oneInd === <span class="hljs-number">0</span> )
+<span class="hljs-keyword">const</span> tenInd = nums.find( <span class="hljs-function"><span class="hljs-params">n</span> =&gt;</span> n === <span class="hljs-number">10</span> )
+assert( tenInd === <span class="hljs-number">-1</span> )
+
+<span class="hljs-keyword">const</span> trees = <span class="hljs-keyword">new</span> Collection&lt;Tree&gt;( [ { name: <span class="hljs-string">'spruce'</span> }, { name: <span class="hljs-string">'poplar'</span> } ] )
+<span class="hljs-keyword">const</span> poplarInd = trees.find( <span class="hljs-function"><span class="hljs-params">t</span> =&gt;</span> t.name === <span class="hljs-string">'poplar'</span> )
+assert( poplarInd  === <span class="hljs-number">-1</span> )</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>predicate: <a href="../globals.html#callbackfunctype" class="tsd-signature-type">CallbackFuncType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Predicate</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> startIndex: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The position where to start searching</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="first" class="tsd-anchor"></a>
+					<h3>first</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">first<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="collection.html">Collection</a>.<a href="collection.html#first">first</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/emgyrz/collossus/blob/eaff73d/src/Collection/index.ts#L85">Collection/index.ts:85</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the first element of the collection, or <code>null</code> if it is empty</p>
+								</div>
+								<pre><code class="language-typescript"><span class="hljs-keyword">const</span> coll = <span class="hljs-keyword">new</span> Collection( [ <span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span> ] )
+assert( coll.first() === <span class="hljs-string">'a'</span> )
+
+coll.clear()
+assert( coll.first() === <span class="hljs-literal">null</span> )</code></pre>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="foreach" class="tsd-anchor"></a>
+					<h3>for<wbr>Each</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">for<wbr>Each<span class="tsd-signature-symbol">(</span>closure<span class="tsd-signature-symbol">: </span><a href="../globals.html#callbackfunctype" class="tsd-signature-type">CallbackFuncType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="collection.html">Collection</a>.<a href="collection.html#foreach">forEach</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/emgyrz/collossus/blob/eaff73d/src/Collection/index.ts#L485">Collection/index.ts:485</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Calls a closure on each element of an collection.</p>
+								</div>
+								<pre><code class="language-typescript"><span class="hljs-keyword">interface</span> Counter {
+  count: <span class="hljs-built_in">number</span>;
+  increment(): <span class="hljs-built_in">void</span>;
+}
+
+<span class="hljs-keyword">const</span> vec: Collection&lt;Counter&gt; = <span class="hljs-keyword">new</span> Collection()
+<span class="hljs-keyword">const</span> c: Counter = {
+  count: <span class="hljs-number">0</span>,
+  increment: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">this</span>.count++
+  }
+}
+vec.push( c )
+vec.forEach( <span class="hljs-function"><span class="hljs-params">c</span> =&gt;</span> c.increment() )
+
+assert( vec.first().count === <span class="hljs-number">1</span> )</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>closure: <a href="../globals.html#callbackfunctype" class="tsd-signature-type">CallbackFuncType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Callback which will be called on each element</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="get" class="tsd-anchor"></a>
+					<h3>get</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="collection.html">Collection</a>.<a href="collection.html#get">get</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/emgyrz/collossus/blob/eaff73d/src/Collection/index.ts#L136">Collection/index.ts:136</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns an element at the given position or <code>null</code></p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>index: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Index</p>
+										<pre><code class="language-typescript"><span class="hljs-keyword">const</span> coll = <span class="hljs-keyword">new</span> Collection( [ <span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span> ] )
+assert( coll.get( <span class="hljs-number">2</span> ) === <span class="hljs-string">'c'</span> )
+assert( coll.get( <span class="hljs-number">12</span> ) === <span class="hljs-literal">null</span> )</code></pre>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="getinnerref" class="tsd-anchor"></a>
+					<h3>get<wbr>Inner<wbr>Ref</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Inner<wbr>Ref<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="collection.html">Collection</a>.<a href="collection.html#getinnerref">getInnerRef</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/emgyrz/collossus/blob/eaff73d/src/Collection/index.ts#L214">Collection/index.ts:214</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns reference to inner array of elements</p>
+								</div>
+								<pre><code class="language-typescript"><span class="hljs-keyword">const</span> vec = <span class="hljs-keyword">new</span> Collection( [ <span class="hljs-number">0</span>, <span class="hljs-number">9</span>, <span class="hljs-number">8</span> ] )
+<span class="hljs-keyword">const</span> inner = vec.getInnerRef()
+assert( inner[ <span class="hljs-number">2</span> ] === <span class="hljs-number">8</span> )
+vec.clear()
+assert( inner[ <span class="hljs-number">0</span> ] === <span class="hljs-literal">undefined</span> )
+assert( inner === vec.getInnerRef() )</code></pre>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="has" class="tsd-anchor"></a>
+					<h3>has</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">has<span class="tsd-signature-symbol">(</span>it<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="collection.html">Collection</a>.<a href="collection.html#has">has</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/emgyrz/collossus/blob/eaff73d/src/Collection/index.ts#L415">Collection/index.ts:415</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns <code>true</code> if the collection contains an element which is the same as the given value.
+									Uses strict comparison</p>
+								</div>
+								<pre><code class="language-typescript"><span class="hljs-keyword">const</span> vec = <span class="hljs-keyword">new</span> Collection( [ <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span> ] )
+assert( vec.has( <span class="hljs-number">8</span> ) )
+assert( !vec.has( <span class="hljs-number">10</span> ) )
+
+<span class="hljs-keyword">const</span> car1 = { name: <span class="hljs-string">'UAZ'</span> }
+<span class="hljs-keyword">const</span> cars = <span class="hljs-keyword">new</span> Collection( [ car1, { name: <span class="hljs-string">'Toyota'</span> }] )
+assert( cars.has( { name: <span class="hljs-string">'Toyota'</span> } ) === <span class="hljs-literal">false</span> )
+assert( cars.has( car1 ) === <span class="hljs-literal">true</span> )</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>it: <span class="tsd-signature-type">T</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Item which is searching for</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="isempty" class="tsd-anchor"></a>
+					<h3>is<wbr>Empty</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Empty<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="collection.html">Collection</a>.<a href="collection.html#isempty">isEmpty</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/emgyrz/collossus/blob/eaff73d/src/Collection/index.ts#L70">Collection/index.ts:70</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns <code>true</code> if the collection contains no elements</p>
+								</div>
+								<pre><code class="language-typescript"><span class="hljs-keyword">const</span> vec = <span class="hljs-keyword">new</span> Collection( [ [], [] ] )
+assert( !vec.isEmpty() )
+vec.clear()
+assert( vec.isEmpty() )</code></pre>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="last" class="tsd-anchor"></a>
+					<h3>last</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">last<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="collection.html">Collection</a>.<a href="collection.html#last">last</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/emgyrz/collossus/blob/eaff73d/src/Collection/index.ts#L102">Collection/index.ts:102</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the last element of the collection, or <code>null</code> if it is empty</p>
+								</div>
+								<pre><code class="language-typescript"><span class="hljs-keyword">const</span> coll = <span class="hljs-keyword">new</span> Collection( [ <span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span> ] )
+assert( coll.last() === <span class="hljs-string">'c'</span> )
+
+coll.clear()
+assert( coll.last() === <span class="hljs-literal">null</span> )</code></pre>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="lastindex" class="tsd-anchor"></a>
+					<h3>last<wbr>Index</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">last<wbr>Index<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="collection.html">Collection</a>.<a href="collection.html#lastindex">lastIndex</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/emgyrz/collossus/blob/eaff73d/src/Collection/index.ts#L120">Collection/index.ts:120</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns index of last element or <code>-1</code></p>
+								</div>
+								<pre><code class="language-typescript"><span class="hljs-keyword">const</span> vec = <span class="hljs-keyword">new</span> Collection()
+assert( vec.lastIndex() === <span class="hljs-number">-1</span> )
+
+vec.push( [ <span class="hljs-number">2</span>, <span class="hljs-number">3</span> ] )
+assert( vec.lastIndex() === <span class="hljs-number">1</span> )
+assert( vec.lastIndex() === ( vec.length - <span class="hljs-number">1</span> ) )</code></pre>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+					<a name="map" class="tsd-anchor"></a>
+					<h3>map</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">map&lt;R&gt;<span class="tsd-signature-symbol">(</span>closure<span class="tsd-signature-symbol">: </span><a href="../globals.html#callbackfunctype" class="tsd-signature-type">CallbackFuncType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="collection.html" class="tsd-signature-type">Collection</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="collection.html">Collection</a>.<a href="collection.html#map">map</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/emgyrz/collossus/blob/eaff73d/src/Collection/index.ts#L514">Collection/index.ts:514</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Produces a new <code>Collection&lt;R&gt;</code> by calling given closure on each element of the original collection
+									and collecting return values of this closure</p>
+								</div>
+								<pre><code class="language-typescript"><span class="hljs-keyword">const</span> coll = <span class="hljs-keyword">new</span> Collection&lt;<span class="hljs-built_in">number</span>&gt;( [ <span class="hljs-number">1</span>, <span class="hljs-number">2</span> ] )
+<span class="hljs-keyword">const</span> doubleStrColl = coll.map( ( n: <span class="hljs-built_in">number</span> ): <span class="hljs-function"><span class="hljs-params">string</span> =&gt;</span> ( n * <span class="hljs-number">2</span> ).toString() )
+
+assert( doubleStrColl.first() === <span class="hljs-string">'2'</span> )
+assert( doubleStrColl.last() === <span class="hljs-string">'4'</span> )</code></pre>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>R</h4>
+									<div class="tsd-comment tsd-typography">
+										<p>Return type of the callback and consequently type of items in generated collection</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>closure: <a href="../globals.html#callbackfunctype" class="tsd-signature-type">CallbackFuncType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Callback which will be called on each element</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="collection.html" class="tsd-signature-type">Collection</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+					<a name="maparr" class="tsd-anchor"></a>
+					<h3>map<wbr>Arr</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">map<wbr>Arr&lt;R&gt;<span class="tsd-signature-symbol">(</span>closure<span class="tsd-signature-symbol">: </span><a href="../globals.html#callbackfunctype" class="tsd-signature-type">CallbackFuncType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="collection.html">Collection</a>.<a href="collection.html#maparr">mapArr</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/emgyrz/collossus/blob/eaff73d/src/Collection/index.ts#L537">Collection/index.ts:537</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Produces a new <code>Array&lt;R&gt;</code> by calling given closure on each element of the original collection
+										and collecting return values of this closure
+									Like <a href="observablecollection.html#map">map</a> but instead of returning Collection return Array</p>
+								</div>
+								<pre><code class="language-typescript"><span class="hljs-keyword">const</span> coll = <span class="hljs-keyword">new</span> Collection&lt;<span class="hljs-built_in">number</span>&gt;( [ <span class="hljs-number">1</span>, <span class="hljs-number">2</span> ] )
+<span class="hljs-keyword">const</span> doubleStrArr = coll.mapArr( ( n: <span class="hljs-built_in">number</span> ): <span class="hljs-function"><span class="hljs-params">string</span> =&gt;</span> ( n * <span class="hljs-number">2</span> ).toString() )
+assert( doubleStrArr[ <span class="hljs-number">0</span> ] === <span class="hljs-string">'2'</span> )
+assert( doubleStrArr[ <span class="hljs-number">1</span> ] === <span class="hljs-string">'4'</span> )
+
+<span class="hljs-keyword">const</span> towns = <span class="hljs-keyword">new</span> Collection( [ { name: <span class="hljs-string">'Sydney'</span> }, { name: <span class="hljs-string">'Baghdad'</span> } ] )
+<span class="hljs-keyword">const</span> names = towns.mapArr( <span class="hljs-function"><span class="hljs-params">t</span> =&gt;</span> t.name )
+assert( names.length === <span class="hljs-number">2</span> &amp;&amp; names[ <span class="hljs-number">1</span> ] === <span class="hljs-string">'Baghdad'</span> )</code></pre>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>R</h4>
+									<div class="tsd-comment tsd-typography">
+										<p>Return type of the callback and consequently type of items in generated array</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>closure: <a href="../globals.html#callbackfunctype" class="tsd-signature-type">CallbackFuncType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Callback which will be called on each element</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="push" class="tsd-anchor"></a>
+					<h3>push</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">push<span class="tsd-signature-symbol">(</span>it<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="collection.html">Collection</a>.<a href="collection.html#push">push</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/emgyrz/collossus/blob/eaff73d/src/Collection/index.ts#L248">Collection/index.ts:248</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Appends an element(s) to the back of a collection</p>
+								</div>
+								<pre><code class="language-typescript"><span class="hljs-keyword">const</span> vec = <span class="hljs-keyword">new</span> Collection( [ <span class="hljs-string">'d'</span>, <span class="hljs-string">'e'</span>, <span class="hljs-string">'w'</span> ] )
+assert( vec.last() === <span class="hljs-string">'w'</span> )
+vec.push( <span class="hljs-string">'a'</span> )
+assert( vec.last() === <span class="hljs-string">'a'</span> )
+vec.push( [ <span class="hljs-string">'x'</span>, <span class="hljs-string">'y'</span>, <span class="hljs-string">'z'</span> ] )
+assert( vec.length === <span class="hljs-number">7</span> )</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>it: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Element or array of elements to append</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="pushuniq" class="tsd-anchor"></a>
+					<h3>push<wbr>Uniq</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">push<wbr>Uniq<span class="tsd-signature-symbol">(</span>it<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="collection.html">Collection</a>.<a href="collection.html#pushuniq">pushUniq</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/emgyrz/collossus/blob/eaff73d/src/Collection/index.ts#L269">Collection/index.ts:269</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Appends an element(s) to the back of a collection only if element is not exists in collection<br>Uses simple strict comparison ( <code>itemA === itemB</code> ) for checking</p>
+								</div>
+								<pre><code class="language-typescript"><span class="hljs-keyword">const</span> nums = <span class="hljs-keyword">new</span> Collection( [ <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span> ] )
+nums.pushUniq( [ <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">5</span> ] ) <span class="hljs-comment">// 3 and 1 will not be appended</span>
+assert( nums.length === <span class="hljs-number">5</span> )
+
+<span class="hljs-keyword">const</span> trees = <span class="hljs-keyword">new</span> Collection( [ { name: <span class="hljs-string">'spruce'</span> }, { name: <span class="hljs-string">'pine'</span> } ] )
+trees.pushUniq( [ { name: <span class="hljs-string">'poplar'</span> }, { name: <span class="hljs-string">'spruce'</span> } ] ) <span class="hljs-comment">// all elements will be appended</span>
+assert( trees.length === <span class="hljs-number">4</span> )
+assert( trees.last().name === <span class="hljs-string">'spruce'</span> )</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>it: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Element or array of elements to append</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="pushuniqby" class="tsd-anchor"></a>
+					<h3>push<wbr>Uniq<wbr>By</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">push<wbr>Uniq<wbr>By<span class="tsd-signature-symbol">(</span>it<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, compare<span class="tsd-signature-symbol">: </span><a href="../globals.html#comparefunctype" class="tsd-signature-type">CompareFuncType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="collection.html">Collection</a>.<a href="collection.html#pushuniqby">pushUniqBy</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/emgyrz/collossus/blob/eaff73d/src/Collection/index.ts#L308">Collection/index.ts:308</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Appends an element(s) to the back of a collection only if element is not exists in collection<br>Uses given compare function to check existing. Comparator must return <code>boolean</code><br>If for some pair of elements (inner and given) compare function returns true, given element will not be added</p>
+								</div>
+								<pre><code class="language-typescript"><span class="hljs-keyword">const</span> nums = <span class="hljs-keyword">new</span> Collection( [ <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span> ] )
+
+nums.pushUniqBy(
+  [ <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">5</span> ],
+  ( innerItem: <span class="hljs-built_in">number</span>, externalItem: <span class="hljs-built_in">number</span> ): <span class="hljs-function"><span class="hljs-params">boolean</span> =&gt;</span> innerItem === externalItem
+)
+<span class="hljs-comment">// 3 and 1 will not be appended. For primitives this example is the same as `pushUniq`</span>
+
+assert( nums.length === <span class="hljs-number">5</span> )
+
+<span class="hljs-keyword">type</span> Tree = { name: <span class="hljs-built_in">string</span> }
+<span class="hljs-keyword">const</span> trees = <span class="hljs-keyword">new</span> Collection&lt;Tree&gt;( [ { name: <span class="hljs-string">'spruce'</span> }, { name: <span class="hljs-string">'pine'</span> } ] )
+trees.pushUniqBy( [ {
+  name: <span class="hljs-string">'poplar'</span>
+}, {
+  name: <span class="hljs-string">'spruce'</span>
+} ], ( itA: Tree, itB: Tree ): <span class="hljs-function"><span class="hljs-params">boolean</span> =&gt;</span> {
+  <span class="hljs-keyword">return</span> itA.name === itB.name
+} )
+<span class="hljs-comment">// second spruce will not be added</span>
+
+assert( trees.length === <span class="hljs-number">3</span> )
+assert( trees.last().name === <span class="hljs-string">'poplar'</span> )</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>it: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Element or array of elements to append</p>
+									</div>
+								</li>
+								<li>
+									<h5>compare: <a href="../globals.html#comparefunctype" class="tsd-signature-type">CompareFuncType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Callback that will be compare given elements and existing in collection elements. Must return <code>boolean</code></p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+					<a name="reduce" class="tsd-anchor"></a>
+					<h3>reduce</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">reduce&lt;A&gt;<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>acc<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span>, it<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">A</span>, initValue<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="collection.html">Collection</a>.<a href="collection.html#reduce">reduce</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/emgyrz/collossus/blob/eaff73d/src/Collection/index.ts#L495">Collection/index.ts:495</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>A</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>callback: <span class="tsd-signature-symbol">(</span>acc<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span>, it<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">A</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>acc<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span>, it<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>acc: <span class="tsd-signature-type">A</span></h5>
+														</li>
+														<li>
+															<h5>it: <span class="tsd-signature-type">T</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">A</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5>initValue: <span class="tsd-signature-type">A</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">A</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="remove" class="tsd-anchor"></a>
+					<h3>remove</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="collection.html">Collection</a>.<a href="collection.html#remove">remove</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/emgyrz/collossus/blob/eaff73d/src/Collection/index.ts#L432">Collection/index.ts:432</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Removes and returns the element at position index within the vector</p>
+								</div>
+								<pre><code class="language-typescript"><span class="hljs-keyword">const</span> vec: Collection&lt;<span class="hljs-built_in">string</span>&gt;  = <span class="hljs-keyword">new</span> Collection( [ <span class="hljs-string">'x'</span>, <span class="hljs-string">'y'</span>, <span class="hljs-string">'z'</span> ] )
+<span class="hljs-keyword">const</span> y = vec.remove( <span class="hljs-number">1</span> )
+assert( y === <span class="hljs-string">'y'</span> &amp;&amp; vec.length === <span class="hljs-number">2</span> )
+<span class="hljs-keyword">const</span> a = vec.remove( <span class="hljs-number">5</span> )
+assert( a === <span class="hljs-literal">null</span> &amp;&amp; vec.length === <span class="hljs-number">2</span> )</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>index: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Index</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="removeby" class="tsd-anchor"></a>
+					<h3>remove<wbr>By</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>By<span class="tsd-signature-symbol">(</span>predicate<span class="tsd-signature-symbol">: </span><a href="../globals.html#callbackfunctype" class="tsd-signature-type">CallbackFuncType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="collection.html">Collection</a>.<a href="collection.html#removeby">removeBy</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/emgyrz/collossus/blob/eaff73d/src/Collection/index.ts#L453">Collection/index.ts:453</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Searches for an element that satisfies a predicate.
+										And if some is matches removes and returns it.
+									Stops after first found element</p>
+								</div>
+								<pre><code class="language-typescript"><span class="hljs-keyword">const</span> vec = <span class="hljs-keyword">new</span> Collection( [ [ <span class="hljs-string">'a'</span> ], [ <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span> ], [ <span class="hljs-string">'d'</span> ] ] )
+vec.removeBy( <span class="hljs-function"><span class="hljs-params">it</span> =&gt;</span> it.length === <span class="hljs-number">2</span> ) <span class="hljs-comment">// removes second array</span>
+assert( vec.length === <span class="hljs-number">2</span> )
+
+<span class="hljs-keyword">const</span> first = vec.removeBy( <span class="hljs-function"><span class="hljs-params">it</span> =&gt;</span> it.length === <span class="hljs-number">1</span> ) <span class="hljs-comment">// removes just first array</span>
+assert( first[ <span class="hljs-number">0</span> ] === <span class="hljs-string">'a'</span> )
+assert( vec.length === <span class="hljs-number">1</span> )</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>predicate: <a href="../globals.html#callbackfunctype" class="tsd-signature-type">CallbackFuncType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Predicate</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="reset" class="tsd-anchor"></a>
+					<h3>reset</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">reset<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="collection.html">Collection</a>.<a href="collection.html#reset">reset</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/emgyrz/collossus/blob/eaff73d/src/Collection/index.ts#L194">Collection/index.ts:194</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Resets all items in collection</p>
+									<ul>
+										<li>If given data is <code>null</code> it will be the same as <a href="observablecollection.html#clear">clear</a></li>
+										<li>If data is Array, these items replace exist items</li>
+									</ul>
+								</div>
+								<pre><code class="language-typescript"><span class="hljs-keyword">const</span> vec = <span class="hljs-keyword">new</span> Collection( [ <span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span> ] )
+vec.reset( [ <span class="hljs-string">'x'</span>, <span class="hljs-string">'y'</span>, <span class="hljs-string">'z'</span> ] )
+assert( vec.last() === <span class="hljs-string">'z'</span> &amp;&amp; vec.first() === <span class="hljs-string">'x'</span> )
+
+vec.reset( <span class="hljs-literal">null</span> )
+assert( vec.isEmpty() )</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>data: <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="rfindby" class="tsd-anchor"></a>
+					<h3>rfind<wbr>By</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">rfind<wbr>By<span class="tsd-signature-symbol">(</span>predicate<span class="tsd-signature-symbol">: </span><a href="../globals.html#callbackfunctype" class="tsd-signature-type">CallbackFuncType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span>, startIndex<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="collection.html">Collection</a>.<a href="collection.html#rfindby">rfindBy</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/emgyrz/collossus/blob/eaff73d/src/Collection/index.ts#L377">Collection/index.ts:377</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Searches for an element in the collection <strong>from the right</strong>, returning it or <code>null</code><br>See <a href="observablecollection.html#findby">findBy</a></p>
+								</div>
+								<pre><code class="language-typescript"><span class="hljs-keyword">const</span> arrays = <span class="hljs-keyword">new</span> Collection( [ [ <span class="hljs-string">'a'</span> ], [ <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span> ], [ <span class="hljs-string">'d'</span> ] ] )
+<span class="hljs-keyword">const</span> arrWithOneItem = arrays.rfindBy( <span class="hljs-function"><span class="hljs-params">a</span> =&gt;</span> a.length === <span class="hljs-number">1</span> )
+assert( arrWithOneItem[ <span class="hljs-number">0</span> ] === <span class="hljs-string">'d'</span> )</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>predicate: <a href="../globals.html#callbackfunctype" class="tsd-signature-type">CallbackFuncType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Predicate</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> startIndex: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The position where to start searching</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="rfindindexby" class="tsd-anchor"></a>
+					<h3>rfind<wbr>Index<wbr>By</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">rfind<wbr>Index<wbr>By<span class="tsd-signature-symbol">(</span>predicate<span class="tsd-signature-symbol">: </span><a href="../globals.html#callbackfunctype" class="tsd-signature-type">CallbackFuncType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span>, startIndex<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="collection.html">Collection</a>.<a href="collection.html#rfindindexby">rfindIndexBy</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/emgyrz/collossus/blob/eaff73d/src/Collection/index.ts#L394">Collection/index.ts:394</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Searches for an element in the collection <strong>from the right</strong>, returning its index or <code>-1</code><br>See <a href="observablecollection.html#findindexby">findIndexBy</a></p>
+								</div>
+								<pre><code class="language-typescript"><span class="hljs-keyword">const</span> arrays = <span class="hljs-keyword">new</span> Collection( [ [ <span class="hljs-string">'a'</span> ], [ <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span> ], [ <span class="hljs-string">'d'</span> ] ] )
+<span class="hljs-keyword">const</span> arrWithOneItemIndex = arrays.rfindIndexBy( <span class="hljs-function"><span class="hljs-params">a</span> =&gt;</span> a.length === <span class="hljs-number">1</span> )
+assert( arrWithOneItemIndex === <span class="hljs-number">2</span> )</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>predicate: <a href="../globals.html#callbackfunctype" class="tsd-signature-type">CallbackFuncType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Predicate</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> startIndex: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The position where to start searching</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="set" class="tsd-anchor"></a>
+					<h3>set</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">set<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, it<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="collection.html">Collection</a>.<a href="collection.html#set">set</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/emgyrz/collossus/blob/eaff73d/src/Collection/index.ts#L158">Collection/index.ts:158</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Replaces element at the given position with new element<br>If <code>index</code> is out of current collection range returns <code>false</code></p>
+								</div>
+								<pre><code class="language-typescript"><span class="hljs-keyword">const</span> coll = <span class="hljs-keyword">new</span> Collection( [ <span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span> ] )
+coll.set( <span class="hljs-number">0</span>, <span class="hljs-string">'x'</span> )
+assert( coll.first() === <span class="hljs-string">'x'</span> )
+<span class="hljs-keyword">const</span> isSetted = coll.set( <span class="hljs-number">10</span>, <span class="hljs-string">'z'</span> )
+assert( !isSetted &amp;&amp; coll.length === <span class="hljs-number">3</span> )</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>index: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Index</p>
+									</div>
+								</li>
+								<li>
+									<h5>it: <span class="tsd-signature-type">T</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="swap" class="tsd-anchor"></a>
+					<h3>swap</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">swap<span class="tsd-signature-symbol">(</span>indexA<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, indexB<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="collection.html">Collection</a>.<a href="collection.html#swap">swap</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/emgyrz/collossus/blob/eaff73d/src/Collection/index.ts#L546">Collection/index.ts:546</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>indexA: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>indexB: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="toarray" class="tsd-anchor"></a>
+					<h3>to<wbr>Array</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">to<wbr>Array<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="collection.html">Collection</a>.<a href="collection.html#toarray">toArray</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/emgyrz/collossus/blob/eaff73d/src/Collection/index.ts#L230">Collection/index.ts:230</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns new array of existing elements, without deep copying</p>
+								</div>
+								<pre><code class="language-typescript"><span class="hljs-keyword">const</span> car = { id: <span class="hljs-number">1</span>, name: <span class="hljs-string">'UAZ'</span> }
+<span class="hljs-keyword">const</span> vec = <span class="hljs-keyword">new</span> Collection()
+vec.push( car )
+<span class="hljs-keyword">const</span> arr = vec.toArray()
+assert( <span class="hljs-built_in">Array</span>.isArray( arr ) )
+assert( arr[ <span class="hljs-number">0</span> ] === car )</code></pre>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="collection.html" class="tsd-kind-icon">Collection</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="idcollection.html" class="tsd-kind-icon">Id<wbr>Collection</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class tsd-has-type-parameter">
+						<a href="observablecollection.html" class="tsd-kind-icon">Observable<wbr>Collection</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
+								<a href="observablecollection.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="observablecollection.html#_list" class="tsd-kind-icon">_list</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+								<a href="observablecollection.html#length" class="tsd-kind-icon">length</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="observablecollection.html#_init" class="tsd-kind-icon">_init</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="observablecollection.html#chunks" class="tsd-kind-icon">chunks</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="observablecollection.html#clear" class="tsd-kind-icon">clear</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="observablecollection.html#findby" class="tsd-kind-icon">find<wbr>By</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="observablecollection.html#findindexby" class="tsd-kind-icon">find<wbr>Index<wbr>By</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="observablecollection.html#first" class="tsd-kind-icon">first</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="observablecollection.html#foreach" class="tsd-kind-icon">for<wbr>Each</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="observablecollection.html#get" class="tsd-kind-icon">get</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="observablecollection.html#getinnerref" class="tsd-kind-icon">get<wbr>Inner<wbr>Ref</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="observablecollection.html#has" class="tsd-kind-icon">has</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="observablecollection.html#isempty" class="tsd-kind-icon">is<wbr>Empty</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="observablecollection.html#last" class="tsd-kind-icon">last</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="observablecollection.html#lastindex" class="tsd-kind-icon">last<wbr>Index</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="observablecollection.html#map" class="tsd-kind-icon">map</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="observablecollection.html#maparr" class="tsd-kind-icon">map<wbr>Arr</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="observablecollection.html#push" class="tsd-kind-icon">push</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="observablecollection.html#pushuniq" class="tsd-kind-icon">push<wbr>Uniq</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="observablecollection.html#pushuniqby" class="tsd-kind-icon">push<wbr>Uniq<wbr>By</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="observablecollection.html#reduce" class="tsd-kind-icon">reduce</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="observablecollection.html#remove" class="tsd-kind-icon">remove</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="observablecollection.html#removeby" class="tsd-kind-icon">remove<wbr>By</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="observablecollection.html#reset" class="tsd-kind-icon">reset</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="observablecollection.html#rfindby" class="tsd-kind-icon">rfind<wbr>By</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="observablecollection.html#rfindindexby" class="tsd-kind-icon">rfind<wbr>Index<wbr>By</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="observablecollection.html#set" class="tsd-kind-icon">set</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="observablecollection.html#swap" class="tsd-kind-icon">swap</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="observablecollection.html#toarray" class="tsd-kind-icon">to<wbr>Array</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="observableidcollection.html" class="tsd-kind-icon">Observable<wbr>IdCollection</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/ihasid.html" class="tsd-kind-icon">IHas<wbr>Id</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="../globals.html#callbackfunctype" class="tsd-kind-icon">Callback<wbr>Func<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="../globals.html#comparefunctype" class="tsd-kind-icon">Compare<wbr>Func<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="../globals.html#idof" class="tsd-kind-icon">Id<wbr>Of</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../globals.html#patchobservablecollections" class="tsd-kind-icon">patch<wbr>Observable<wbr>Collections</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>
