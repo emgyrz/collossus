@@ -6,25 +6,32 @@ TMP_DOCS_DIR="/tmp/collosus_docs"
 DOCS_DIR="docs/html"
 VERSION=$(sed -n 's/.*"version": "\(.*\)",/\1/p' package.json)
 
-echo "Switching to master branch"
+log() {
+  printf "\n[PUB_DOCS]: $1\n"
+}
+
+log "Switching to master branch"
 git checkout master && \
 
-echo "Compiling docs"
+log "Compiling docs"
 npm run doc && \
 
-echo "Copying docs to temp dir"
+log "Copying docs to temp dir"
 rsync -av "${DOCS_DIR}/" $TMP_DOCS_DIR --delete
 
-echo "Switching to gh-pages branch"
+log "Switching to gh-pages branch"
 git checkout gh-pages && \
 
-echo "Copying docs from temp dir to current"
+log "Copying docs from temp dir to current"
 rsync -av "${TMP_DOCS_DIR}/" . && \
 
-echo "Pushing to repo"
+log "Pushing to repo"
 git add . && \
 git commit -m "gh-pages ${VERSION}" && \
 git push && \
 
-echo "Switching to master branch"
+log "Switching to master branch"
 git checkout master
+
+
+log "Done!"
