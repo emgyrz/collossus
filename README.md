@@ -1,72 +1,56 @@
 # collossus
 
-Collection ( or Array or Vector or List or etc.) of elements of the same type.
+Collection of elements of the same type, has everything that we are so lacking in JS `Array`s and a little more.
 
-![npm](https://img.shields.io/npm/v/collossus)
+[![npm](https://img.shields.io/npm/v/collossus)](https://www.npmjs.com/package/collossus)
+[![docs](https://img.shields.io/badge/-docs-green)](https://emgyrz.github.io/collossus/)
 
-Has everything that we are so lacking in JS `Array`s and a little more.\
-It is strongly typed: written in TypeScript and has Flow declarations.
+### Benefits:
+ - It is strongly typed: written in TypeScript and has Flow declarations
+ - No more boilerplate code when working with arrays
+ - Unbelievable helps when your data has identifiers
+ - Ready to use with `MobX`. See [this block](#using-with-mobx).
 
 
-### Exports two main classes:
+### What it has
+Exports two main classes:
 * `Collection` - Just a wrapper around the Array, adds methods that make life easier. [docs](https://emgyrz.github.io/collossus/classes/collection)
-* `IdCollection` - Identified collection. This collection is inherited from the previous one. Designed to work with data that has an identifier (`id: number | string`). [docs](https://emgyrz.github.io/collossus/classes/idcollection)
+* `IdCollection` - Identified collection. This collection is inherited from the previous one. Designed to work with data that has an id (`id: number | string`). [docs](https://emgyrz.github.io/collossus/classes/idcollection)
+
+
 
 
 
 ### Example:
+##### Some of `Collection` class
 ```typescript
-import { Collection, IdCollection } from 'collossus'
+import { Collection } from 'collossus'
 
-type TreeType = {
-  id: number,
-  name: string,
-}
+const names = new Collection( [ 'Max' ] ) // [ ' Max' ]
+names.push( [ 'Yan', 'Li' ] // [ ' Max', 'Yan', 'Li' ]
+names.last() // -> 'Li'
+names.swap( 1, 2 ) // [ ' Max', 'Li', 'Yan' ]
+names.pushUniq( 'Max' ) // [ ' Max', 'Li', 'Yan' ]
+names.rfindIndexBy( n => n === 'Yan' ) // -> 2
+names.clear() // []
+```
+##### Some of `IdCollection` class
+```typescript
+import { IdCollection } from 'collossus'
 
-const treesColl = new IdCollection<TreeType>()
+type User = { id: number, name: string }
 
-treesColl.pushUniq( [ { id: 3, name: 'poplar' }, { id: 5, name: 'spruce' }, { id: 11, name: 'pine' } ] ) // adds only unique elements
-
-const furnitureToMake: Collection<string> = new Collection( [ 'bed', 'couch' ] )
-
-if ( furnitureToMake.has('couch') ) {
-  const poplar = treesColl.findBy( tree => tree.name === 'poplar' ) // returns null or item
-
-  if ( poplar !== null ) {
-    SomeWhere.makeFurniture( 'couch', poplar ).then(() => {
-      treesColl.removeById( poplar.id ) // remove item from collection just by id
-
-      const ind = furnitureToMake.rfindIndexBy( it => it === 'couch' ) // searched from right
-      if( ind !== -1 ) {
-        furnitureToMake.remove( ind ) // removes element at given position
-      }
-
-    } )
-  }
-}
-
-
-
-if (
-  furnitureToMake.isEmpty() // it`s clear
-) {
-  const remainingTrees = treesColl.toArray() // shallow copy of collection elements
-  SomeWhere.sellTrees( remainingTrees )
-  treesColl.clear() // removes all
-
-} else {
-  const furn = furnitureToMake.first() // first item
-  const tree = treesColl.last() // last item. Your Captain Obvious
-  if ( tree === null || furn === null ) throw 'nothing to do'
-  SomeWhere.makeFurniture( furn, tree ).then( () => {
-    if( furn === 'bed') {
-      SomeWhere.goToSleep()
-    }
-  })
-}
+const users = new IdCollection<User>( [ { id: 33, name: 'Max' } ] ) // [{ id: 33, name: 'Max' }]
+users.push( [ { id: 55, name: 'Yan' } ] ) // [{ id: 33, name: 'Max' },{ id: 55, name: 'Yan' }]
+users.findById( 33 ) // -> { id: 33, name: 'Max' }
+users.pushUniqById( { id: 55, name: 'Li' } ) // [{ id: 33, name: 'Max' },{ id: 55, name: 'Yan' }]
+users.removeById( 55 ) // [ { id: 33, name: 'Max' } ]
+users.first() // { id: 33, name: 'Max' }
+users.clear() // []
 ```
 
-### `Collection` methods
+### Methods
+##### `Collection` methods
 
 * [chunks](https://emgyrz.github.io/collossus/classes/collection.html#chunks) - `( chunkSize: number ) => Array<Array<T>>`
 * [clear](https://emgyrz.github.io/collossus/classes/collection.html#clear) - `() => void`
@@ -96,7 +80,7 @@ if (
 * [toArray](https://emgyrz.github.io/collossus/classes/collection.html#toarray) - `() => Array<T>`
 
 
-### `IdCollection` methods
+##### `IdCollection` methods
 
 * [findById](https://emgyrz.github.io/collossus/classes/idcollection.html#findbyid) - `( id: IdOf<T> ) => null | T`
 * [findIndexById](https://emgyrz.github.io/collossus/classes/idcollection.html#findindexbyid) - `( id: IdOf<T> ) => number`
@@ -104,6 +88,28 @@ if (
 * [pushUniqById](https://emgyrz.github.io/collossus/classes/idcollection.html#pushuniqbyid) - `( it: Array<T> | T ) => void`
 * [removeById](https://emgyrz.github.io/collossus/classes/idcollection.html#removebyid) - `( id: IdOf<T> ) => null | T`
 
+
+
+### Using with `Mobx`
+Library exports two classes that prepared to be observable - `ObservableCollection` and `ObservableIdCollection`. 
+But since it does not have `Mobx` in its dependencies you should patch it with your version of `Mobx`. 
+You need to do it just once in your project before creating instances of observable collection.
+```typescript
+import * as mobx from 'mobx'
+import { patchObservableCollections, ObservableCollection } from 'collossus'
+
+// call this somewhere on init
+patchObservableCollections( mobx )
+
+// now ObservableCollection is **really** observable
+const oc = new ObservableCollection( [ 1, 2, 3 ] )
+
+// this is `action`
+oc.push( 4 )
+// and this too
+oc.remove( 0 )
+```
+Everything else is identical to `Collection` and `IdCollection`
 
 
 ### License

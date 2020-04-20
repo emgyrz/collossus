@@ -19,8 +19,18 @@ describe( 'Collection misc methods', () => {
 
   test( 'chunks', () => {
     const chunks = coll.chunks( 2 )
-    console.log( chunks )
     expect( chunks ).toEqual( [ [ 1, 2 ], [ 3, 4 ], [ 5 ] ] )
+  } )
+
+
+  test( 'shuffle', () => {
+    const arr = Array( 1000 ).fill( 0 ).map( ( _, i ) => i )
+    coll.push( arr )
+    const origin = coll.toArray()
+    for ( let i = 0; i < 10; i++ ) {
+      coll.shuffle()
+      expect( coll.toArray() ).not.toEqual( origin )
+    }
   } )
 
 } )

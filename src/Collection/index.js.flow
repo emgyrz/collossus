@@ -24,6 +24,9 @@ push( it: T | Array<T> ): void;
 pushUniq( it: T | Array<T> ): void;
 pushUniqBy( it: T | Array<T>, compare: CompareFuncType<T> ): void;
 
+pop(): null | T;
+shift(): null | T;
+
 findBy( cb: CallbackFuncType<T, boolean>, startIndex?: number ): null | T;
 findIndexBy( cb: CallbackFuncType<T, boolean>, startIndex?: number ): number;
 rfindBy( cb: CallbackFuncType<T, boolean>, startIndex?: number ): null | T;
@@ -43,5 +46,5 @@ mapArr<R>( callback: CallbackFuncType<T, R> ): Array<R>;
 
 chunks( chunkSize: number ): Array<Array<T>>;
 swap( indexA: number, indexB: number ): boolean;
-
+shuffle(): void;
 }

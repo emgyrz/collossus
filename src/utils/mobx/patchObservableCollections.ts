@@ -21,9 +21,12 @@ const COLL_ACTIONS: CollKeysType[] = [
   'push',
   'pushUniq',
   'pushUniqBy',
+  'pop',
+  'shift',
   'remove',
   'removeBy',
   'swap',
+  'shuffle',
 ]
 
 
@@ -41,7 +44,10 @@ function _defineLengthGetter( proto: any ) {
   } )
 }
 
+let _isAllreadyPatched = false
+
 function patchObservableCollections( mobx: MobX ) {
+  if ( _isAllreadyPatched ) return
   const { decorate, action, observable, computed } = mobx
 
   COLL_ACTIONS.forEach( k => {
@@ -67,6 +73,7 @@ function patchObservableCollections( mobx: MobX ) {
     length: computed,
   } )
 
+  _isAllreadyPatched = true
 }
 
 export {

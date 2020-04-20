@@ -1,6 +1,6 @@
 {
   "name": "collossus",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "main": "./index.js",
   "types": "./index.d.ts",
   "license": "MIT",
@@ -29,7 +29,7 @@
     "url": "https://github.com/emgyrz/collossus/issues"
   },
   "homepage": "https://github.com/emgyrz/collossus",
-  "description": "Typed collection of elements",
+  "description": "Collection of elements of the same type, has everything that we are so lacking in JS Arrays and a little more",
   "keywords": [
     "collection",
     "array",
@@ -54,8 +54,8 @@
     "rollup-plugin-copy": "^3.3.0",
     "rollup-plugin-uglify": "^6.0.4",
     "ts-jest": "^25.3.0",
-    "typedoc": "^0.17.0-3",
     "tslint": "^6.1.1",
+    "typedoc": "^0.17.0-3",
     "typescript": "~3.8.3"
   },
   "eslintIgnore": [
@@ -63,6 +63,5 @@
     "dist",
     "**/*.ts"
   ],
-  "dependencies": {
-  }
+  "dependencies": {}
 }

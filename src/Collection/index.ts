@@ -5,6 +5,7 @@ import { findBy, findIndexBy, findIndexRightBy, findRightBy, has } from './finde
 import { push, pushUniq, pushUniqBy } from './push'
 import { remove, removeBy } from './remove'
 import { chunks } from './chunks'
+import { shuffle } from './shuffle'
 
 /**
  * Collection of elements with type `T` with many helpful methods
@@ -310,6 +311,41 @@ export default class Collection<T> {
   }
 
   /**
+   * Removes the last element from the collection and returns it.
+   * Or return `null` if collection is empty
+   *
+   * ```typescript
+   * const chars = new Collection( [ 'o', 'p', 'q' ] )
+   * const last = chars.pop()
+   * assert( last === 'q' )
+   * assert( chars.length === 2 ) // [ 'o', 'p' ]
+   * ```
+   *
+   */
+  pop(): null | T {
+    const last = this._list.pop()
+    return last === undefined ? null : last
+  }
+
+
+  /**
+   * Removes the first element from the collection and returns it.
+   * Or return `null` if collection is empty
+   *
+   * ```typescript
+   * const chars = new Collection( [ 'o', 'p', 'q' ] )
+   * const first = chars.shift()
+   * assert( first === 'o' )
+   * assert( chars.length === 2 ) // [ 'p', 'q' ]
+   * ```
+   *
+   */
+  shift(): null | T {
+    const first = this._list.shift()
+    return first === undefined ? null : first
+  }
+
+  /**
    * Searches for an element that satisfies a predicate\
    * Takes a closure that returns `boolean`. It applies this closure to each element of the collection,
    * and if any of them return `true`, then `findBy()` returns element. If they all return `false`, it returns `null`
@@ -543,6 +579,21 @@ export default class Collection<T> {
     return chunks( this._list, chunkSize )
   }
 
+  /**
+   * Swaps two elements in the collection
+   * Returns false if `indexA` or `indexB` are out of bounds.
+   *
+   * ```typescript
+   * const nums = new Collection( [ 1, 2, 3 ] )
+   * nums.swap( 0, 2 )
+   * assert( nums.first() === 3 && nums.last() === 1 )
+   * const isSwapped = nums.swap( 0, 4 )
+   * assert( isSwapped === false )
+   * ```
+   *
+   * @param indexA - index of the first element
+   * @param indexB - index of the second element
+   */
   swap( indexA: number, indexB: number ): boolean {
     const len = this.length
     if ( !isValidIndex( indexA, len ) || !isValidIndex( indexB, len ) ) { return false }
@@ -552,5 +603,19 @@ export default class Collection<T> {
     list[ indexB ] = tmp
     return true
   }
+
+  /**
+   * Shuffles the collection by using Fisher-Yates algorithm.
+   *
+   * ```typescript
+   * const vec = new Collection( [ 1, 2, 3 ] )
+   * vec.shuffle()
+   * assert( true ) // who knows in what sequence these elements are now
+   * ```
+   */
+  shuffle(): void {
+    shuffle( this._list )
+  }
+
 }
 
