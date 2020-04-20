@@ -2,7 +2,7 @@
 
 Collection ( or Array or Vector or List or etc.) of elements of the same type.
 
-![npm](https://img.shields.io/npm/v/collossus)
+[![npm](https://img.shields.io/npm/v/collossus)](https://www.npmjs.com/package/collossus)
 
 Has everything that we are so lacking in JS `Array`s and a little more.\
 It is strongly typed: written in TypeScript and has Flow declarations.
