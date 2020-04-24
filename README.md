@@ -66,6 +66,7 @@ users.clear() // []
 * [lastIndex](https://emgyrz.github.io/collossus/classes/collection.html#lastindex) - `() => number`
 * [map](https://emgyrz.github.io/collossus/classes/collection.html#map) - `<R>( closure: CallbackFuncType<T, R> ) => Collection<R>`
 * [mapArr](https://emgyrz.github.io/collossus/classes/collection.html#maparr) - `<R>( closure: CallbackFuncType<T, R> ) => Array<R>`
+* [pop](https://emgyrz.github.io/collossus/classes/collection.html#pop) - `() => null | T => void`
 * [push](https://emgyrz.github.io/collossus/classes/collection.html#push) - `( it: T | Array<T> ) => void`
 * [pushUniq](https://emgyrz.github.io/collossus/classes/collection.html#pushuniq) - `( it: T | Array<T> ) => void`
 * [pushUniqBy](https://emgyrz.github.io/collossus/classes/collection.html#pushuniqby) - `( it: T | Array<T>, compare: CompareFuncType<T> ) => void`
@@ -76,6 +77,8 @@ users.clear() // []
 * [rfindBy](https://emgyrz.github.io/collossus/classes/collection.html#rfindby) - `( predicate: CallbackFuncType<T, boolean>, startIndex?: number ) => null | T`
 * [rfindIndexBy](https://emgyrz.github.io/collossus/classes/collection.html#rfindindexby) - `( predicate: CallbackFuncType<T, boolean>, startIndex?: number ) => number`
 * [set](https://emgyrz.github.io/collossus/classes/collection.html#set) - `( index: number, it: T ) => boolean`
+* [shift](https://emgyrz.github.io/collossus/classes/collection.html#shift) - `() => null | T`
+* [shuffle](https://emgyrz.github.io/collossus/classes/collection.html#shuffle) - `() => void`
 * [swap](https://emgyrz.github.io/collossus/classes/collection.html#swap) - `( indexA: number, indexB: number ) => boolean`
 * [toArray](https://emgyrz.github.io/collossus/classes/collection.html#toarray) - `() => Array<T>`
 
