@@ -67,69 +67,60 @@
 				<a href="#collossus" id="collossus" style="color: inherit; text-decoration: none;">
 					<h1>collossus</h1>
 				</a>
-				<p>Collection ( or Array or Vector or List or etc.) of elements of the same type.</p>
-				<p><a href="https://www.npmjs.com/package/collossus"><img src="https://img.shields.io/npm/v/collossus" alt="npm"></a></p>
-				<p>Has everything that we are so lacking in JS <code>Array</code>s and a little more.<br>It is strongly typed: written in TypeScript and has Flow declarations.</p>
-				<a href="#exports-two-main-classes" id="exports-two-main-classes" style="color: inherit; text-decoration: none;">
-					<h3>Exports two main classes:</h3>
+				<p>Collection of elements of the same type, has everything that we are so lacking in JS <code>Array</code>s and a little more.</p>
+				<p><a href="https://www.npmjs.com/package/collossus"><img src="https://img.shields.io/npm/v/collossus" alt="npm"></a>
+				<a href="https://emgyrz.github.io/collossus/"><img src="https://img.shields.io/badge/-docs-green" alt="docs"></a></p>
+				<a href="#benefits" id="benefits" style="color: inherit; text-decoration: none;">
+					<h3>Benefits:</h3>
 				</a>
 				<ul>
+					<li>It is strongly typed: written in TypeScript and has Flow declarations</li>
+					<li>No more boilerplate code when working with arrays</li>
+					<li>Unbelievable helps when your data has identifiers</li>
+					<li>Ready to use with <code>MobX</code>. See <a href="#using-with-mobx">this block</a>.</li>
+				</ul>
+				<a href="#what-it-has" id="what-it-has" style="color: inherit; text-decoration: none;">
+					<h3>What it has</h3>
+				</a>
+				<p>Exports two main classes:</p>
+				<ul>
 					<li><code>Collection</code> - Just a wrapper around the Array, adds methods that make life easier. <a href="https://emgyrz.github.io/collossus/classes/collection">docs</a></li>
-					<li><code>IdCollection</code> - Identified collection. This collection is inherited from the previous one. Designed to work with data that has an identifier (<code>id: number | string</code>). <a href="https://emgyrz.github.io/collossus/classes/idcollection">docs</a></li>
+					<li><code>IdCollection</code> - Identified collection. This collection is inherited from the previous one. Designed to work with data that has an id (<code>id: number | string</code>). <a href="https://emgyrz.github.io/collossus/classes/idcollection">docs</a></li>
 				</ul>
 				<a href="#example" id="example" style="color: inherit; text-decoration: none;">
 					<h3>Example:</h3>
 				</a>
-				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { Collection, IdCollection } <span class="hljs-keyword">from</span> <span class="hljs-string">'collossus'</span>
+				<a href="#some-of-collection-class" id="some-of-collection-class" style="color: inherit; text-decoration: none;">
+					<h5>Some of <code>Collection</code> class</h5>
+				</a>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { Collection } <span class="hljs-keyword">from</span> <span class="hljs-string">'collossus'</span>
 
-<span class="hljs-keyword">type</span> TreeType = {
-  id: <span class="hljs-built_in">number</span>,
-  name: <span class="hljs-built_in">string</span>,
-}
+<span class="hljs-keyword">const</span> names = <span class="hljs-keyword">new</span> Collection( [ <span class="hljs-string">'Max'</span> ] ) <span class="hljs-comment">// [ ' Max' ]</span>
+names.push( [ <span class="hljs-string">'Yan'</span>, <span class="hljs-string">'Li'</span> ] <span class="hljs-comment">// [ ' Max', 'Yan', 'Li' ]</span>
+names.last() <span class="hljs-comment">// -&gt; 'Li'</span>
+names.swap( <span class="hljs-number">1</span>, <span class="hljs-number">2</span> ) <span class="hljs-comment">// [ ' Max', 'Li', 'Yan' ]</span>
+names.pushUniq( <span class="hljs-string">'Max'</span> ) <span class="hljs-comment">// [ ' Max', 'Li', 'Yan' ]</span>
+names.rfindIndexBy( <span class="hljs-function"><span class="hljs-params">n</span> =&gt;</span> n === <span class="hljs-string">'Yan'</span> ) <span class="hljs-comment">// -&gt; 2</span>
+names.clear() <span class="hljs-comment">// []</span></code></pre>
+				<a href="#some-of-idcollection-class" id="some-of-idcollection-class" style="color: inherit; text-decoration: none;">
+					<h5>Some of <code>IdCollection</code> class</h5>
+				</a>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { IdCollection } <span class="hljs-keyword">from</span> <span class="hljs-string">'collossus'</span>
 
-<span class="hljs-keyword">const</span> treesColl = <span class="hljs-keyword">new</span> IdCollection&lt;TreeType&gt;()
+<span class="hljs-keyword">type</span> User = { id: <span class="hljs-built_in">number</span>, name: <span class="hljs-built_in">string</span> }
 
-treesColl.pushUniq( [ { id: <span class="hljs-number">3</span>, name: <span class="hljs-string">'poplar'</span> }, { id: <span class="hljs-number">5</span>, name: <span class="hljs-string">'spruce'</span> }, { id: <span class="hljs-number">11</span>, name: <span class="hljs-string">'pine'</span> } ] ) <span class="hljs-comment">// adds only unique elements</span>
-
-<span class="hljs-keyword">const</span> furnitureToMake: Collection&lt;<span class="hljs-built_in">string</span>&gt; = <span class="hljs-keyword">new</span> Collection( [ <span class="hljs-string">'bed'</span>, <span class="hljs-string">'couch'</span> ] )
-
-<span class="hljs-keyword">if</span> ( furnitureToMake.has(<span class="hljs-string">'couch'</span>) ) {
-  <span class="hljs-keyword">const</span> poplar = treesColl.findBy( <span class="hljs-function"><span class="hljs-params">tree</span> =&gt;</span> tree.name === <span class="hljs-string">'poplar'</span> ) <span class="hljs-comment">// returns null or item</span>
-
-  <span class="hljs-keyword">if</span> ( poplar !== <span class="hljs-literal">null</span> ) {
-    SomeWhere.makeFurniture( <span class="hljs-string">'couch'</span>, poplar ).then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
-      treesColl.removeById( poplar.id ) <span class="hljs-comment">// remove item from collection just by id</span>
-
-      <span class="hljs-keyword">const</span> ind = furnitureToMake.rfindIndexBy( <span class="hljs-function"><span class="hljs-params">it</span> =&gt;</span> it === <span class="hljs-string">'couch'</span> ) <span class="hljs-comment">// searched from right</span>
-      <span class="hljs-keyword">if</span>( ind !== <span class="hljs-number">-1</span> ) {
-        furnitureToMake.remove( ind ) <span class="hljs-comment">// removes element at given position</span>
-      }
-
-    } )
-  }
-}
-
-
-
-<span class="hljs-keyword">if</span> (
-  furnitureToMake.isEmpty() <span class="hljs-comment">// it`s clear</span>
-) {
-  <span class="hljs-keyword">const</span> remainingTrees = treesColl.toArray() <span class="hljs-comment">// shallow copy of collection elements</span>
-  SomeWhere.sellTrees( remainingTrees )
-  treesColl.clear() <span class="hljs-comment">// removes all</span>
-
-} <span class="hljs-keyword">else</span> {
-  <span class="hljs-keyword">const</span> furn = furnitureToMake.first() <span class="hljs-comment">// first item</span>
-  <span class="hljs-keyword">const</span> tree = treesColl.last() <span class="hljs-comment">// last item. Your Captain Obvious</span>
-  <span class="hljs-keyword">if</span> ( tree === <span class="hljs-literal">null</span> || furn === <span class="hljs-literal">null</span> ) <span class="hljs-keyword">throw</span> <span class="hljs-string">'nothing to do'</span>
-  SomeWhere.makeFurniture( furn, tree ).then( <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
-    <span class="hljs-keyword">if</span>( furn === <span class="hljs-string">'bed'</span>) {
-      SomeWhere.goToSleep()
-    }
-  })
-}</code></pre>
+<span class="hljs-keyword">const</span> users = <span class="hljs-keyword">new</span> IdCollection&lt;User&gt;( [ { id: <span class="hljs-number">33</span>, name: <span class="hljs-string">'Max'</span> } ] ) <span class="hljs-comment">// [{ id: 33, name: 'Max' }]</span>
+users.push( [ { id: <span class="hljs-number">55</span>, name: <span class="hljs-string">'Yan'</span> } ] ) <span class="hljs-comment">// [{ id: 33, name: 'Max' },{ id: 55, name: 'Yan' }]</span>
+users.findById( <span class="hljs-number">33</span> ) <span class="hljs-comment">// -&gt; { id: 33, name: 'Max' }</span>
+users.pushUniqById( { id: <span class="hljs-number">55</span>, name: <span class="hljs-string">'Li'</span> } ) <span class="hljs-comment">// [{ id: 33, name: 'Max' },{ id: 55, name: 'Yan' }]</span>
+users.removeById( <span class="hljs-number">55</span> ) <span class="hljs-comment">// [ { id: 33, name: 'Max' } ]</span>
+users.first() <span class="hljs-comment">// { id: 33, name: 'Max' }</span>
+users.clear() <span class="hljs-comment">// []</span></code></pre>
+				<a href="#methods" id="methods" style="color: inherit; text-decoration: none;">
+					<h3>Methods</h3>
+				</a>
 				<a href="#collection-methods" id="collection-methods" style="color: inherit; text-decoration: none;">
-					<h3><code>Collection</code> methods</h3>
+					<h5><code>Collection</code> methods</h5>
 				</a>
 				<ul>
 					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#chunks">chunks</a> - <code>( chunkSize: number ) =&gt; Array&lt;Array&lt;T&gt;&gt;</code></li>
@@ -160,7 +151,7 @@ treesColl.pushUniq( [ { id: <span class="hljs-number">3</span>, name: <span clas
 					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#toarray">toArray</a> - <code>() =&gt; Array&lt;T&gt;</code></li>
 				</ul>
 				<a href="#idcollection-methods" id="idcollection-methods" style="color: inherit; text-decoration: none;">
-					<h3><code>IdCollection</code> methods</h3>
+					<h5><code>IdCollection</code> methods</h5>
 				</a>
 				<ul>
 					<li><a href="https://emgyrz.github.io/collossus/classes/idcollection.html#findbyid">findById</a> - <code>( id: IdOf&lt;T&gt; ) =&gt; null | T</code></li>
@@ -169,6 +160,26 @@ treesColl.pushUniq( [ { id: <span class="hljs-number">3</span>, name: <span clas
 					<li><a href="https://emgyrz.github.io/collossus/classes/idcollection.html#pushuniqbyid">pushUniqById</a> - <code>( it: Array&lt;T&gt; | T ) =&gt; void</code></li>
 					<li><a href="https://emgyrz.github.io/collossus/classes/idcollection.html#removebyid">removeById</a> - <code>( id: IdOf&lt;T&gt; ) =&gt; null | T</code></li>
 				</ul>
+				<a href="#using-with-mobx" id="using-with-mobx" style="color: inherit; text-decoration: none;">
+					<h3>Using with <code>Mobx</code></h3>
+				</a>
+				<p>Library exports two classes that prepared to be observable - <code>ObservableCollection</code> and <code>ObservableIdCollection</code>.
+					But since it does not have <code>Mobx</code> in its dependencies you should patch it with your version of <code>Mobx</code>.
+				You need to do it just once in your project before creating instances of observable collection.</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> mobx <span class="hljs-keyword">from</span> <span class="hljs-string">'mobx'</span>
+<span class="hljs-keyword">import</span> { patchObservableCollections, ObservableCollection } <span class="hljs-keyword">from</span> <span class="hljs-string">'collossus'</span>
+
+<span class="hljs-comment">// call this somewhere on init</span>
+patchObservableCollections( mobx )
+
+<span class="hljs-comment">// now ObservableCollection is **really** observable</span>
+<span class="hljs-keyword">const</span> oc = <span class="hljs-keyword">new</span> ObservableCollection( [ <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span> ] )
+
+<span class="hljs-comment">// this is `action`</span>
+oc.push( <span class="hljs-number">4</span> )
+<span class="hljs-comment">// and this too</span>
+oc.remove( <span class="hljs-number">0</span> )</code></pre>
+				<p>Everything else is identical to <code>Collection</code> and <code>IdCollection</code></p>
 				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
 					<h3>License</h3>
 				</a>
