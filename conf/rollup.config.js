@@ -20,7 +20,6 @@ export default [
         targets: [ {
           src: [
             'src/**/*.js.flow',
-            'package.json',
             'tsconfig.json',
             '.flowconfig',
             'README.md',
