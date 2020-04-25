@@ -14,8 +14,8 @@ Collection of elements of the same type, has everything that we are so lacking i
 
 ### What it has
 Exports two main classes:
-* `Collection` - Just a wrapper around the Array, adds methods that make life easier. [docs](https://emgyrz.github.io/collossus/classes/collection)
-* `IdCollection` - Identified collection. This collection is inherited from the previous one. Designed to work with data that has an id (`id: number | string`). [docs](https://emgyrz.github.io/collossus/classes/idcollection)
+* `Collection` - Just a wrapper around the Array, adds methods that make life easier ([docs](https://emgyrz.github.io/collossus/classes/collection)).
+* `IdCollection` - Identified collection. This collection is inherited from the previous one. Designed to work with data that has an `id: number | string` ([docs](https://emgyrz.github.io/collossus/classes/idcollection)).
 
 
 
