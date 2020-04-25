@@ -610,12 +610,32 @@ export default class Collection<T> {
    * ```typescript
    * const vec = new Collection( [ 1, 2, 3 ] )
    * vec.shuffle()
-   * assert( true ) // who knows in what sequence these elements are now
+   * assert( true ) // who knows in what sequence these numbers are now
    * ```
    */
   shuffle(): void {
     shuffle( this._list )
   }
+
+  /**
+   * Returns json string of inner array of elements.
+   * It is unlikely, but it is still possible that the `JSON.stringify` ends with an error,
+   * in that case `toJSON` will return `null`
+   *
+   * ```typescript
+   * const colors = new Collection( [ 'red', 'green' ] )
+   * const json = colors.toJSON()
+   * assert( json === "[\"red\",\"green\"]" )
+   * ```
+   */
+  toJSON(): null | string {
+    try {
+      return JSON.stringify( this._list )
+    } catch {
+      return null
+    }
+  }
+
 
 }
 

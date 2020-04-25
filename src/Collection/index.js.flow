@@ -47,4 +47,5 @@ mapArr<R>( callback: CallbackFuncType<T, R> ): Array<R>;
 chunks( chunkSize: number ): Array<Array<T>>;
 swap( indexA: number, indexB: number ): boolean;
 shuffle(): void;
+toJSON(): null | string;
 }

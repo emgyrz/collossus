@@ -27,7 +27,7 @@ Exports two main classes:
 import { Collection } from 'collossus'
 
 const names = new Collection( [ 'Max' ] ) // [ ' Max' ]
-names.push( [ 'Yan', 'Li' ] // [ ' Max', 'Yan', 'Li' ]
+names.push( [ 'Yan', 'Li' ] ) // [ ' Max', 'Yan', 'Li' ]
 names.last() // -> 'Li'
 names.swap( 1, 2 ) // [ ' Max', 'Li', 'Yan' ]
 names.pushUniq( 'Max' ) // [ ' Max', 'Li', 'Yan' ]
@@ -66,7 +66,7 @@ users.clear() // []
 * [lastIndex](https://emgyrz.github.io/collossus/classes/collection.html#lastindex) - `() => number`
 * [map](https://emgyrz.github.io/collossus/classes/collection.html#map) - `<R>( closure: CallbackFuncType<T, R> ) => Collection<R>`
 * [mapArr](https://emgyrz.github.io/collossus/classes/collection.html#maparr) - `<R>( closure: CallbackFuncType<T, R> ) => Array<R>`
-* [pop](https://emgyrz.github.io/collossus/classes/collection.html#pop) - `() => null | T => void`
+* [pop](https://emgyrz.github.io/collossus/classes/collection.html#pop) - `() => null | T`
 * [push](https://emgyrz.github.io/collossus/classes/collection.html#push) - `( it: T | Array<T> ) => void`
 * [pushUniq](https://emgyrz.github.io/collossus/classes/collection.html#pushuniq) - `( it: T | Array<T> ) => void`
 * [pushUniqBy](https://emgyrz.github.io/collossus/classes/collection.html#pushuniqby) - `( it: T | Array<T>, compare: CompareFuncType<T> ) => void`
@@ -81,6 +81,7 @@ users.clear() // []
 * [shuffle](https://emgyrz.github.io/collossus/classes/collection.html#shuffle) - `() => void`
 * [swap](https://emgyrz.github.io/collossus/classes/collection.html#swap) - `( indexA: number, indexB: number ) => boolean`
 * [toArray](https://emgyrz.github.io/collossus/classes/collection.html#toarray) - `() => Array<T>`
+* [toJSON](https://emgyrz.github.io/collossus/classes/collection.html#tojson) - `() => null | string`
 
 
 ##### `IdCollection` methods
@@ -107,6 +108,8 @@ patchObservableCollections( mobx )
 // now ObservableCollection is **really** observable
 const oc = new ObservableCollection( [ 1, 2, 3 ] )
 
+// this is `computed`
+oc.length
 // this is `action`
 oc.push( 4 )
 // and this too

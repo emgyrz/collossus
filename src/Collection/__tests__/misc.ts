@@ -33,4 +33,14 @@ describe( 'Collection misc methods', () => {
     }
   } )
 
+
+  test( 'toJSON', () => {
+    const collJSON = coll.toJSON()
+    expect( collJSON ).toBe( "[1,2,3,4,5]" )
+    const obj = { a: 1, x: { a: 1 } }
+    const cyclicColl = new Collection([ obj ])
+    obj.x = obj
+    expect( cyclicColl.toJSON() ).toBe( null )
+  } )
+
 } )
