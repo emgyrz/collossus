@@ -96,7 +96,7 @@
 				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { Collection } <span class="hljs-keyword">from</span> <span class="hljs-string">'collossus'</span>
 
 <span class="hljs-keyword">const</span> names = <span class="hljs-keyword">new</span> Collection( [ <span class="hljs-string">'Max'</span> ] ) <span class="hljs-comment">// [ ' Max' ]</span>
-names.push( [ <span class="hljs-string">'Yan'</span>, <span class="hljs-string">'Li'</span> ] <span class="hljs-comment">// [ ' Max', 'Yan', 'Li' ]</span>
+names.push( [ <span class="hljs-string">'Yan'</span>, <span class="hljs-string">'Li'</span> ] ) <span class="hljs-comment">// [ ' Max', 'Yan', 'Li' ]</span>
 names.last() <span class="hljs-comment">// -&gt; 'Li'</span>
 names.swap( <span class="hljs-number">1</span>, <span class="hljs-number">2</span> ) <span class="hljs-comment">// [ ' Max', 'Li', 'Yan' ]</span>
 names.pushUniq( <span class="hljs-string">'Max'</span> ) <span class="hljs-comment">// [ ' Max', 'Li', 'Yan' ]</span>
@@ -137,6 +137,7 @@ users.clear() <span class="hljs-comment">// []</span></code></pre>
 					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#lastindex">lastIndex</a> - <code>() =&gt; number</code></li>
 					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#map">map</a> - <code>&lt;R&gt;( closure: CallbackFuncType&lt;T, R&gt; ) =&gt; Collection&lt;R&gt;</code></li>
 					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#maparr">mapArr</a> - <code>&lt;R&gt;( closure: CallbackFuncType&lt;T, R&gt; ) =&gt; Array&lt;R&gt;</code></li>
+					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#pop">pop</a> - <code>() =&gt; null | T</code></li>
 					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#push">push</a> - <code>( it: T | Array&lt;T&gt; ) =&gt; void</code></li>
 					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#pushuniq">pushUniq</a> - <code>( it: T | Array&lt;T&gt; ) =&gt; void</code></li>
 					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#pushuniqby">pushUniqBy</a> - <code>( it: T | Array&lt;T&gt;, compare: CompareFuncType&lt;T&gt; ) =&gt; void</code></li>
@@ -147,8 +148,11 @@ users.clear() <span class="hljs-comment">// []</span></code></pre>
 					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#rfindby">rfindBy</a> - <code>( predicate: CallbackFuncType&lt;T, boolean&gt;, startIndex?: number ) =&gt; null | T</code></li>
 					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#rfindindexby">rfindIndexBy</a> - <code>( predicate: CallbackFuncType&lt;T, boolean&gt;, startIndex?: number ) =&gt; number</code></li>
 					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#set">set</a> - <code>( index: number, it: T ) =&gt; boolean</code></li>
+					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#shift">shift</a> - <code>() =&gt; null | T</code></li>
+					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#shuffle">shuffle</a> - <code>() =&gt; void</code></li>
 					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#swap">swap</a> - <code>( indexA: number, indexB: number ) =&gt; boolean</code></li>
 					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#toarray">toArray</a> - <code>() =&gt; Array&lt;T&gt;</code></li>
+					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#tojson">toJSON</a> - <code>() =&gt; null | string</code></li>
 				</ul>
 				<a href="#idcollection-methods" id="idcollection-methods" style="color: inherit; text-decoration: none;">
 					<h5><code>IdCollection</code> methods</h5>
@@ -175,6 +179,8 @@ patchObservableCollections( mobx )
 <span class="hljs-comment">// now ObservableCollection is **really** observable</span>
 <span class="hljs-keyword">const</span> oc = <span class="hljs-keyword">new</span> ObservableCollection( [ <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span> ] )
 
+<span class="hljs-comment">// this is `computed`</span>
+oc.length
 <span class="hljs-comment">// this is `action`</span>
 oc.push( <span class="hljs-number">4</span> )
 <span class="hljs-comment">// and this too</span>
