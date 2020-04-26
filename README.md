@@ -11,9 +11,9 @@ Collection of elements of the same type, has everything that we are so lacking i
  - Unbelievable helps when your data has identifiers
  - Ready to use with `MobX`. See [this block](#using-with-mobx)
  - No built-in objects prototype modifications
- - Unlike some utility libraries (lodash etc.) which are generally very helpful, you make code in OOP style 
+ - Unlike some utility libraries (lodash etc.) which are generally very helpful, you may code in OOP style 
    and not by calling multiple unrelated functions
- - There is nothing unnecessary methods, focus only on working with arrays
+ - There is no unnecessary methods, focus only on working with arrays
 
 
 ### What it has
