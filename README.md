@@ -5,11 +5,15 @@ Collection of elements of the same type, has everything that we are so lacking i
 [![npm](https://img.shields.io/npm/v/collossus)](https://www.npmjs.com/package/collossus)
 [![docs](https://img.shields.io/badge/-docs-green)](https://emgyrz.github.io/collossus/)
 
-### Benefits:
+### Benefits and specialities:
  - It is strongly typed: written in TypeScript and has Flow declarations
  - No more boilerplate code when working with arrays
  - Unbelievable helps when your data has identifiers
- - Ready to use with `MobX`. See [this block](#using-with-mobx).
+ - Ready to use with `MobX`. See [this block](#using-with-mobx)
+ - No built-in objects prototype modifications
+ - Unlike some utility libraries (lodash etc.) which are generally very helpful, you make code in OOP style 
+   and not by calling multiple unrelated functions
+ - There is nothing unnecessary methods, focus only on working with arrays
 
 
 ### What it has
