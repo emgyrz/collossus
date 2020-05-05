@@ -1,6 +1,6 @@
 {
   "name": "collossus",
-  "version": "0.4.1",
+  "version": "0.4.3",
   "main": "./index.js",
   "types": "./index.d.ts",
   "license": "MIT",

@@ -5,6 +5,7 @@ declare export function isArr<T>( arr: any ): boolean %checks ( Array.isArray( a
 declare export function isNull( some: any ): boolean %checks ( some === null )
 
 declare export function isNum( some: any ): boolean %checks ( typeof some === 'number' )
+declare export function isUint( some: any ): boolean %checks ( typeof some === 'number' )
 
 declare export function castArr<T>( maybeArr?: Array<T> ): Array<T>
 

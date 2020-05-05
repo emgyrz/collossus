@@ -1,10 +1,18 @@
 // @flow
 import Collection from "../../Collection"
 import IdCollection from "../../IdCollection"
-import type { IHasId } from "../../_types"
+import type { CallbackFuncType, IdOf, IHasId } from "../../_types"
 
 declare export class ObservableCollection<T> extends Collection<T> {
+  constructor( initItems?: Array<T> ): ObservableCollection<T>;
+  map<R>( callback: CallbackFuncType<T, R> ): ObservableCollection<R>;
+  filterBy( predicate: CallbackFuncType<T, boolean> ): ObservableCollection<T>;
+  repeat( num: number ): ObservableCollection<T>;
 }
 
 declare export class ObservableIdCollection<T: IHasId> extends IdCollection<T> {
+  constructor( initItems?: Array<T> ): ObservableIdCollection<T>;
+  map<R: IHasId>( callback: CallbackFuncType<T, R> ): ObservableIdCollection<R>;
+  filterBy( predicate: CallbackFuncType<T, boolean> ): ObservableIdCollection<T>;
+  repeat( num: number ): ObservableIdCollection<T>;
 }

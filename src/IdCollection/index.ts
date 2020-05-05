@@ -2,7 +2,7 @@ import Collection from '../Collection'
 import { isNull } from '../hlp'
 import { defaultIdCompareFn, genDefaultIdPredicate } from './utils'
 
-import { IdOf, IHasId } from '../_types'
+import { CallbackFuncType, IdOf, IHasId } from '../_types'
 
 /**
  * Identified collection for elements with ID.
@@ -10,7 +10,6 @@ import { IdOf, IHasId } from '../_types'
  *
  */
 export default class IdCollection<T extends IHasId> extends Collection<T> {
-
   /**
    * Search item by ID and returns it, otherwise returns null
    *
@@ -119,6 +118,14 @@ export default class IdCollection<T extends IHasId> extends Collection<T> {
    */
   pushUniqById( it: Array<T> | T ): void {
     this.pushUniqBy( it, defaultIdCompareFn )
+  }
+
+  /**
+   * @hidden
+   */
+  // @ts-ignore
+  map<R extends IHasId>( closure: CallbackFuncType<T, R> ): IdCollection<R> {
+    return new IdCollection<R>( this.mapArr( closure ) )
   }
 
 }

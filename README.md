@@ -5,11 +5,15 @@ Collection of elements of the same type, has everything that we are so lacking i
 [![npm](https://img.shields.io/npm/v/collossus)](https://www.npmjs.com/package/collossus)
 [![docs](https://img.shields.io/badge/-docs-green)](https://emgyrz.github.io/collossus/)
 
-### Benefits:
+### Benefits and specialities:
  - It is strongly typed: written in TypeScript and has Flow declarations
  - No more boilerplate code when working with arrays
  - Unbelievable helps when your data has identifiers
- - Ready to use with `MobX`. See [this block](#using-with-mobx).
+ - Ready to use with `MobX`. See [this block](#using-with-mobx)
+ - No built-in objects prototype modifications
+ - Unlike some utility libraries (lodash etc.) which are generally very helpful, you may code in OOP style 
+   and not by calling multiple unrelated functions
+ - There is no unnecessary methods, focus only on working with arrays
 
 
 ### What it has
@@ -54,6 +58,8 @@ users.clear() // []
 
 * [chunks](https://emgyrz.github.io/collossus/classes/collection.html#chunks) - `( chunkSize: number ) => Array<Array<T>>`
 * [clear](https://emgyrz.github.io/collossus/classes/collection.html#clear) - `() => void`
+* [drainFilterBy](https://emgyrz.github.io/collossus/classes/collection.html#drainfilterby) - `( predicate: CallbackFuncType<T, boolean> ) => Array<T>`
+* [filterBy](https://emgyrz.github.io/collossus/classes/collection.html#filterby) - `( predicate: CallbackFuncType<T, boolean> ) => Collection<T>`
 * [findBy](https://emgyrz.github.io/collossus/classes/collection.html#findby) - `( predicate: CallbackFuncType<T, boolean>, startIndex?: number ) => null | T`
 * [findIndexBy](https://emgyrz.github.io/collossus/classes/collection.html#findindexby) - `( predicate: CallbackFuncType<T, boolean>, startIndex?: number ) => number`
 * [first](https://emgyrz.github.io/collossus/classes/collection.html#first) - `() => null | T`
@@ -73,7 +79,9 @@ users.clear() // []
 * [reduce](https://emgyrz.github.io/collossus/classes/collection.html#reduce) - `<A>( callback: ( acc: A, it: T ) => A, initValue: A ) => A`
 * [remove](https://emgyrz.github.io/collossus/classes/collection.html#remove) - `( index: number ) => null | T`
 * [removeBy](https://emgyrz.github.io/collossus/classes/collection.html#removeby) - `( predicate: CallbackFuncType<T, boolean> ) => null | T`
+* [repeat](https://emgyrz.github.io/collossus/classes/collection.html#repeat) - `( num: number ) => Collection<T>`
 * [reset](https://emgyrz.github.io/collossus/classes/collection.html#reset) - `( data: null | Array<T> ) => void`
+* [retainBy](https://emgyrz.github.io/collossus/classes/collection.html#retainby) - `( predicate: CallbackFuncType<T, boolean>, startIndex?: number ) => Array<T>`
 * [rfindBy](https://emgyrz.github.io/collossus/classes/collection.html#rfindby) - `( predicate: CallbackFuncType<T, boolean>, startIndex?: number ) => null | T`
 * [rfindIndexBy](https://emgyrz.github.io/collossus/classes/collection.html#rfindindexby) - `( predicate: CallbackFuncType<T, boolean>, startIndex?: number ) => number`
 * [set](https://emgyrz.github.io/collossus/classes/collection.html#set) - `( index: number, it: T ) => boolean`
@@ -82,6 +90,7 @@ users.clear() // []
 * [swap](https://emgyrz.github.io/collossus/classes/collection.html#swap) - `( indexA: number, indexB: number ) => boolean`
 * [toArray](https://emgyrz.github.io/collossus/classes/collection.html#toarray) - `() => Array<T>`
 * [toJSON](https://emgyrz.github.io/collossus/classes/collection.html#tojson) - `() => null | string`
+* [truncate](https://emgyrz.github.io/collossus/classes/collection.html#truncate) - `( len: number ) => boolean`
 
 
 ##### `IdCollection` methods

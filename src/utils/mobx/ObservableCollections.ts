@@ -1,6 +1,6 @@
 import Collection from "../../Collection"
 import IdCollection from "../../IdCollection"
-import { IHasId } from "../../_types"
+import { CallbackFuncType, IHasId } from "../../_types"
 
 
 /**
@@ -9,6 +9,14 @@ import { IHasId } from "../../_types"
  * See all docs in {@link Collection}
  */
 export class ObservableCollection<T> extends Collection<T> {
+
+  /**
+   * @hidden
+   */
+  // @ts-ignore
+  map<R>( closure: CallbackFuncType<T, R> ): Collection<R> {
+    return new ObservableCollection<R>( this.mapArr( closure ) )
+  }
 }
 
 
@@ -18,4 +26,12 @@ export class ObservableCollection<T> extends Collection<T> {
  * See all docs in {@link IdCollection}
  */
 export class ObservableIdCollection<T extends IHasId> extends IdCollection<T> {
+
+  /**
+   * @hidden
+   */
+  // @ts-ignore
+  map<R extends IHasId>( closure: CallbackFuncType<T, R> ): ObservableIdCollection<R> {
+    return new ObservableIdCollection<R>( this.mapArr( closure ) )
+  }
 }

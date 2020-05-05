@@ -11,16 +11,15 @@ export default [
     output: {
       file: path.join( DISTDIR, 'index.umd.js' ),
       format: 'umd',
-      name: 'collections'
+      name: 'collossus'
     },
     plugins: [
       typescript(),
-      uglify(),
+      // uglify(),
       copy( {
         targets: [ {
           src: [
             'src/**/*.js.flow',
-            'package.json',
             'tsconfig.json',
             '.flowconfig',
             'README.md',

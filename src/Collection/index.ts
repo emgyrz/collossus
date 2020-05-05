@@ -1,11 +1,15 @@
 import { isArr, isValidIndex } from '../hlp'
 
-import { CallbackFuncType, CompareFuncType } from '../_types'
+import { CallbackFuncType, CompareFuncType, IHasId } from '../_types'
 import { findBy, findIndexBy, findIndexRightBy, findRightBy, has } from './finders'
 import { push, pushUniq, pushUniqBy } from './push'
 import { remove, removeBy } from './remove'
 import { chunks } from './chunks'
 import { shuffle } from './shuffle'
+import { repeat } from "./repeat";
+import { filter } from "./filters";
+import IdCollection from "../IdCollection";
+
 
 /**
  * Collection of elements with type `T` with many helpful methods
@@ -36,12 +40,6 @@ export default class Collection<T> {
    */
   constructor( initItems?: Array<T> ) {
     this._init( initItems )
-
-  }
-
-  protected _init( initItems?: Array<T> ) {
-    this._list = []
-    this.reset( isArr( initItems ) ? initItems : null )
   }
 
   /**
@@ -84,10 +82,11 @@ export default class Collection<T> {
    * ```
    */
   first(): null | T {
-    if ( this.length === 0 ) { return null }
+    if ( this.length === 0 ) {
+      return null
+    }
     return this._list[ 0 ]
   }
-
 
   /**
    * Returns the last element of the collection, or `null` if it is empty
@@ -102,7 +101,9 @@ export default class Collection<T> {
    */
   last(): null | T {
     const lastInd = this.lastIndex()
-    if ( lastInd === -1 ) { return null }
+    if ( lastInd === -1 ) {
+      return null
+    }
     return this._list[ lastInd ]
   }
 
@@ -141,7 +142,6 @@ export default class Collection<T> {
     return this._list[ index ]
   }
 
-
   /**
    * Replaces element at the given position with new element\
    * If `index` is out of current collection range returns `false`
@@ -163,7 +163,6 @@ export default class Collection<T> {
     this._list[ index ] = it
     return true
   }
-
 
   /**
    * Clears the collection, removing all values
@@ -271,7 +270,6 @@ export default class Collection<T> {
     pushUniq( this._list, it )
   }
 
-
   /**
    * Appends an element(s) to the back of a collection only if element is not exists in collection\
    * Uses given compare function to check existing. Comparator must return `boolean`\
@@ -327,7 +325,6 @@ export default class Collection<T> {
     return last === undefined ? null : last
   }
 
-
   /**
    * Removes the first element from the collection and returns it.
    * Or return `null` if collection is empty
@@ -371,7 +368,6 @@ export default class Collection<T> {
   findBy( predicate: CallbackFuncType<T, boolean>, startIndex?: number ): null | T {
     return findBy( this._list, predicate, startIndex )
   }
-
 
   /**
    * Searches for an index of element that satisfies a predicate\
@@ -490,10 +486,6 @@ export default class Collection<T> {
     return removeBy( this._list, predicate )
   }
 
-  // removeRange( startIndex: number, endIndex: number ): number {
-  //   return removeRange( this._list, startIndex, endIndex )
-  // }
-
   /**
    * Calls a closure on each element of an collection.
    *
@@ -523,18 +515,17 @@ export default class Collection<T> {
     this._list.forEach( closure )
   }
 
-  // TODO:
-  // some( callback: CallbackFuncType<T, boolean>, startIndex?: number ): boolean {
-  //   return !isNull( this.findBy( callback, startIndex ) )
-  // }
-
   reduce<A>( callback: ( acc: A, it: T ) => A, initValue: A ): A {
     return this._list.reduce( callback, initValue )
   }
 
+  // removeRange( startIndex: number, endIndex: number ): number {
+  //   return removeRange( this._list, startIndex, endIndex )
+  // }
+
   /**
-   * Produces a new `Collection<R>` by calling given closure on each element of the original collection
-   * and collecting return values of this closure
+   * Produces a new instance of current type of collection by calling given closure on each element of the original collection
+   * and yielding return values of this closure
    *
    * ```typescript
    * const coll = new Collection<number>( [ 1, 2 ] )
@@ -542,19 +533,29 @@ export default class Collection<T> {
    *
    * assert( doubleStrColl.first() === '2' )
    * assert( doubleStrColl.last() === '4' )
+   *
+   * const indexes = new Collection([ { i: 1, i: 3 } ] )
+   * const indexesRenamed = indexes.map( ( item ) => ( { index: item.i } ) )
+   * assert( indexesRenamed.first().index === 1 )
+   * assert( indexesRenamed.first().i === undefined )
    * ```
    *
    * @typeParam R - Return type of the callback and consequently type of items in generated collection
    * @param closure - Callback which will be called on each element
    */
   map<R>( closure: CallbackFuncType<T, R> ): Collection<R> {
-    return new Collection( this.mapArr( closure ) )
+    return new Collection<R>( this.mapArr( closure ) )
   }
+
+  // TODO:
+  // some( callback: CallbackFuncType<T, boolean>, startIndex?: number ): boolean {
+  //   return !isNull( this.findBy( callback, startIndex ) )
+  // }
 
   /**
    * Produces a new `Array<R>` by calling given closure on each element of the original collection
    * and collecting return values of this closure
-   * Like {@link map} but instead of returning Collection return Array
+   * Like {@link map} but returns Array instead of collection
    *
    * ```typescript
    * const coll = new Collection<number>( [ 1, 2 ] )
@@ -596,7 +597,9 @@ export default class Collection<T> {
    */
   swap( indexA: number, indexB: number ): boolean {
     const len = this.length
-    if ( !isValidIndex( indexA, len ) || !isValidIndex( indexB, len ) ) { return false }
+    if ( !isValidIndex( indexA, len ) || !isValidIndex( indexB, len ) ) {
+      return false
+    }
     const list = this._list
     const tmp = list[ indexA ]
     list[ indexA ] = list[ indexB ]
@@ -636,6 +639,106 @@ export default class Collection<T> {
     }
   }
 
+  /**
+   * Creates new instance of current type of collection only with elements that
+   * pass the test implemented by the provided function.
+   * Similar to `Array.prototype.filter`
+   *
+   * ```typescript
+   * const arrays = new Collection( [ [], [ 5 ], [] ] )
+   * const nonEmptyArrays = arrays.filterBy( ( arr: number[] ): boolean => arr.length !== 0 )
+   *
+   * assert( nonEmptyArrays.length === 1 )
+   * assert( nonEmptyArrays.first()[ 0 ] === 5 )
+   * ```
+   * @param predicate - Predicate
+   */
+  filterBy( predicate: CallbackFuncType<T, boolean> ): this {
+    const { passed } = filter( this._list, predicate, false )
+    // @ts-ignore
+    return new this.constructor( passed )
+  }
+
+  /**
+   * For all elements calls a provided function to determine if an element **should be removed** from collection.
+   * Works in place and returns `Array` of removed elements.
+   *
+   * ```typescript
+   * const nums = new Collection( [ 1, 79, 5, 42, 3 ] )
+   * const _removed = nums.drainFilterBy( ( n ) => n > 10 )
+   *
+   * assert( nums.length === 3 && nums.last() === 3 )
+   * assert( _removed.length === 2 && _removed.first() === 79 )
+   * ```
+   *
+   * @param predicate - Predicate
+   */
+  drainFilterBy( predicate: CallbackFuncType<T, boolean> ): Array<T> {
+    const { passed, removed } = filter( this._list, predicate, true )
+    this.reset( passed )
+    return removed
+  }
+
+  /**
+   * Retains only the elements specified by the predicate.
+   *
+   * In other words, remove all elements for which predicate return false.
+   * Like a {@link filter} but operates in place. Returns `Array` of removed elements.
+   *
+   * ```typescript
+   * const nums = new Collection( [ 1, 79, 5, 42, 3 ] )
+   * nums.retainBy( ( n ) => n > 10 )
+   *
+   * assert( nums.length === 2 )
+   * assert( nums.first() === 79 && nums.last() === 42 )
+   * ```
+   *
+   * @param predicate - Predicate
+   */
+  retainBy( predicate: CallbackFuncType<T, boolean> ): Array<T> {
+    const { passed, removed } = filter( this._list, predicate, false )
+    this.reset( passed )
+    return removed
+  }
+
+  /**
+   * Shortens the collection, keeping the first `len` elements and dropping the rest.
+   * If len is greater than the vector's current length, this has no effect.
+   * Returns `true` if collection truncated.
+   *
+   * ```typescript
+   * const chars = new Collection( [ 'a', 'b', 'c', 'd' ] )
+   * chars.truncate( 2 )
+   * assert.deepEqual( chars.toArray(), [ 'a', 'b' ] )
+   * ```
+   *
+   * @param len - Expected length of collection
+   */
+  truncate( len: number ): boolean {
+    if ( !isValidIndex( len, this.length ) ) return false
+    this._list.length = len
+    return true
+  }
+
+  /**
+   * Creates a new collection by repeating all elements `num` times.
+   *
+   * ```typescript
+   * const chars = new Collection( [ 'a', 'z' ] )
+   * const repeated = chars.repeat( 3 )
+   * assert.deepEqual( repeated.toArray(), [ 'a', 'z', 'a', 'z', 'a', 'z' ] )
+   * ```
+   */
+  repeat( num: number ): this {
+    const items = repeat( this._list, num )
+    // @ts-ignore
+    return new this.constructor( items )
+  }
+
+  protected _init( initItems?: Array<T> ) {
+    this._list = []
+    this.reset( isArr( initItems ) ? initItems : null )
+  }
 
 }
 

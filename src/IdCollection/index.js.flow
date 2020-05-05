@@ -2,7 +2,7 @@
 
 import Collection from '../Collection'
 
-import type { IdOf, IHasId } from '../_types'
+import type { CallbackFuncType, IdOf, IHasId } from '../_types'
 
 declare export default class IdCollection<T: IHasId> extends Collection<T> {
 constructor( initItems?: Array<T> ): IdCollection<T>;
@@ -12,4 +12,8 @@ findIndexById( id: IdOf<T> ): number;
 removeById( id: IdOf<T> ): boolean;
 hasById( id: IdOf<T> ): boolean;
 pushUniqById( it: Array<T> | T ): void;
+
+map<R: IHasId>( callback: CallbackFuncType<T, R> ): IdCollection<R>;
+filterBy( predicate: CallbackFuncType<T, boolean> ): IdCollection<T>;
+repeat( num: number ): IdCollection<T>;
 }

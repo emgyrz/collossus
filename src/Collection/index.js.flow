@@ -48,4 +48,10 @@ chunks( chunkSize: number ): Array<Array<T>>;
 swap( indexA: number, indexB: number ): boolean;
 shuffle(): void;
 toJSON(): null | string;
+
+filterBy( predicate: CallbackFuncType<T, boolean> ): Collection<T>;
+drainFilterBy( predicate: CallbackFuncType<T, boolean> ): Array<T>;
+retainBy( predicate: CallbackFuncType<T, boolean> ): Array<T>;
+truncate( len: number ): boolean;
+repeat( num: number ): Collection<T>;
 }
