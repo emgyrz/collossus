@@ -12,7 +12,7 @@ Collection of elements of the same type, has everything that we are so lacking i
  - Ready to use with `MobX`. See [this block](#using-with-mobx)
  - No built-in objects prototype modifications
  - Unlike some utility libraries (lodash etc.) which are generally very helpful, you may code in OOP style 
-   and not by calling multiple unrelated functions
+   not by calling multiple unrelated functions
  - There is no unnecessary methods, focus only on working with arrays
 
 
@@ -81,7 +81,7 @@ users.clear() // []
 * [removeBy](https://emgyrz.github.io/collossus/classes/collection.html#removeby) - `( predicate: CallbackFuncType<T, boolean> ) => null | T`
 * [repeat](https://emgyrz.github.io/collossus/classes/collection.html#repeat) - `( num: number ) => Collection<T>`
 * [reset](https://emgyrz.github.io/collossus/classes/collection.html#reset) - `( data: null | Array<T> ) => void`
-* [retainBy](https://emgyrz.github.io/collossus/classes/collection.html#retainby) - `( predicate: CallbackFuncType<T, boolean>, startIndex?: number ) => Array<T>`
+* [retainBy](https://emgyrz.github.io/collossus/classes/collection.html#retainby) - `( predicate: CallbackFuncType<T, boolean> ) => Array<T>`
 * [rfindBy](https://emgyrz.github.io/collossus/classes/collection.html#rfindby) - `( predicate: CallbackFuncType<T, boolean>, startIndex?: number ) => null | T`
 * [rfindIndexBy](https://emgyrz.github.io/collossus/classes/collection.html#rfindindexby) - `( predicate: CallbackFuncType<T, boolean>, startIndex?: number ) => number`
 * [set](https://emgyrz.github.io/collossus/classes/collection.html#set) - `( index: number, it: T ) => boolean`
