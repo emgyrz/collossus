@@ -22,6 +22,9 @@ rsync -av "${DOCS_DIR}/" $TMP_DOCS_DIR --delete
 log "Switching to gh-pages branch"
 git checkout gh-pages && \
 
+log "Pulling gh-pages branch"
+git pull origin gh-pages && \
+
 log "Copying docs from temp dir to current"
 rsync -av "${TMP_DOCS_DIR}/" . && \
 

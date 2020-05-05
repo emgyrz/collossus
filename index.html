@@ -70,22 +70,26 @@
 				<p>Collection of elements of the same type, has everything that we are so lacking in JS <code>Array</code>s and a little more.</p>
 				<p><a href="https://www.npmjs.com/package/collossus"><img src="https://img.shields.io/npm/v/collossus" alt="npm"></a>
 				<a href="https://emgyrz.github.io/collossus/"><img src="https://img.shields.io/badge/-docs-green" alt="docs"></a></p>
-				<a href="#benefits" id="benefits" style="color: inherit; text-decoration: none;">
-					<h3>Benefits:</h3>
+				<a href="#benefits-and-specialities" id="benefits-and-specialities" style="color: inherit; text-decoration: none;">
+					<h3>Benefits and specialities:</h3>
 				</a>
 				<ul>
 					<li>It is strongly typed: written in TypeScript and has Flow declarations</li>
 					<li>No more boilerplate code when working with arrays</li>
 					<li>Unbelievable helps when your data has identifiers</li>
-					<li>Ready to use with <code>MobX</code>. See <a href="#using-with-mobx">this block</a>.</li>
+					<li>Ready to use with <code>MobX</code>. See <a href="#using-with-mobx">this block</a></li>
+					<li>No built-in objects prototype modifications</li>
+					<li>Unlike some utility libraries (lodash etc.) which are generally very helpful, you may code in OOP style
+					and not by calling multiple unrelated functions</li>
+					<li>There is no unnecessary methods, focus only on working with arrays</li>
 				</ul>
 				<a href="#what-it-has" id="what-it-has" style="color: inherit; text-decoration: none;">
 					<h3>What it has</h3>
 				</a>
 				<p>Exports two main classes:</p>
 				<ul>
-					<li><code>Collection</code> - Just a wrapper around the Array, adds methods that make life easier. <a href="https://emgyrz.github.io/collossus/classes/collection">docs</a></li>
-					<li><code>IdCollection</code> - Identified collection. This collection is inherited from the previous one. Designed to work with data that has an id (<code>id: number | string</code>). <a href="https://emgyrz.github.io/collossus/classes/idcollection">docs</a></li>
+					<li><code>Collection</code> - Just a wrapper around the Array, adds methods that make life easier (<a href="https://emgyrz.github.io/collossus/classes/collection">docs</a>).</li>
+					<li><code>IdCollection</code> - Identified collection. This collection is inherited from the previous one. Designed to work with data that has an <code>id: number | string</code> (<a href="https://emgyrz.github.io/collossus/classes/idcollection">docs</a>).</li>
 				</ul>
 				<a href="#example" id="example" style="color: inherit; text-decoration: none;">
 					<h3>Example:</h3>
@@ -125,6 +129,8 @@ users.clear() <span class="hljs-comment">// []</span></code></pre>
 				<ul>
 					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#chunks">chunks</a> - <code>( chunkSize: number ) =&gt; Array&lt;Array&lt;T&gt;&gt;</code></li>
 					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#clear">clear</a> - <code>() =&gt; void</code></li>
+					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#drainfilterby">drainFilterBy</a> - <code>( predicate: CallbackFuncType&lt;T, boolean&gt; ) =&gt; Array&lt;T&gt;</code></li>
+					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#filterby">filterBy</a> - <code>( predicate: CallbackFuncType&lt;T, boolean&gt; ) =&gt; Collection&lt;T&gt;</code></li>
 					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#findby">findBy</a> - <code>( predicate: CallbackFuncType&lt;T, boolean&gt;, startIndex?: number ) =&gt; null | T</code></li>
 					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#findindexby">findIndexBy</a> - <code>( predicate: CallbackFuncType&lt;T, boolean&gt;, startIndex?: number ) =&gt; number</code></li>
 					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#first">first</a> - <code>() =&gt; null | T</code></li>
@@ -144,7 +150,9 @@ users.clear() <span class="hljs-comment">// []</span></code></pre>
 					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#reduce">reduce</a> - <code>&lt;A&gt;( callback: ( acc: A, it: T ) =&gt; A, initValue: A ) =&gt; A</code></li>
 					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#remove">remove</a> - <code>( index: number ) =&gt; null | T</code></li>
 					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#removeby">removeBy</a> - <code>( predicate: CallbackFuncType&lt;T, boolean&gt; ) =&gt; null | T</code></li>
+					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#repeat">repeat</a> - <code>( num: number ) =&gt; Collection&lt;T&gt;</code></li>
 					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#reset">reset</a> - <code>( data: null | Array&lt;T&gt; ) =&gt; void</code></li>
+					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#retainby">retainBy</a> - <code>( predicate: CallbackFuncType&lt;T, boolean&gt;, startIndex?: number ) =&gt; Array&lt;T&gt;</code></li>
 					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#rfindby">rfindBy</a> - <code>( predicate: CallbackFuncType&lt;T, boolean&gt;, startIndex?: number ) =&gt; null | T</code></li>
 					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#rfindindexby">rfindIndexBy</a> - <code>( predicate: CallbackFuncType&lt;T, boolean&gt;, startIndex?: number ) =&gt; number</code></li>
 					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#set">set</a> - <code>( index: number, it: T ) =&gt; boolean</code></li>
@@ -153,6 +161,7 @@ users.clear() <span class="hljs-comment">// []</span></code></pre>
 					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#swap">swap</a> - <code>( indexA: number, indexB: number ) =&gt; boolean</code></li>
 					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#toarray">toArray</a> - <code>() =&gt; Array&lt;T&gt;</code></li>
 					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#tojson">toJSON</a> - <code>() =&gt; null | string</code></li>
+					<li><a href="https://emgyrz.github.io/collossus/classes/collection.html#truncate">truncate</a> - <code>( len: number ) =&gt; boolean</code></li>
 				</ul>
 				<a href="#idcollection-methods" id="idcollection-methods" style="color: inherit; text-decoration: none;">
 					<h5><code>IdCollection</code> methods</h5>
